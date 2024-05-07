@@ -22,5 +22,10 @@ namespace Radio_handbook.Models
                 Resistors.Add(r);
             }
         }
+
+        internal List<Resistor> Search(string name, string r)
+        {
+            return Resistors;
+        }
     }
 }
