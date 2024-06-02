@@ -70,7 +70,6 @@
             searchButton = new Button();
             resistanceTextBox = new TextBox();
             resistanceLabel = new Label();
-            typeTextBox = new TextBox();
             typeLabel = new Label();
             nameTextBox = new TextBox();
             nameLabel = new Label();
@@ -298,7 +297,6 @@
             panel1.Controls.Add(searchButton);
             panel1.Controls.Add(resistanceTextBox);
             panel1.Controls.Add(resistanceLabel);
-            panel1.Controls.Add(typeTextBox);
             panel1.Controls.Add(typeLabel);
             panel1.Controls.Add(nameTextBox);
             panel1.Controls.Add(nameLabel);
@@ -311,12 +309,14 @@
             // 
             // typeСomboBox
             // 
+            typeСomboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             typeСomboBox.FormattingEnabled = true;
-            typeСomboBox.Items.AddRange(new object[] { "Всі типи", "Резистор", "Конденсатор", "Котушка індуктивності" });
-            typeСomboBox.Location = new Point(360, 222);
+            typeСomboBox.Items.AddRange(new object[] { "", "Резистор", "Конденсатор", "Котушка індуктивності" });
+            typeСomboBox.Location = new Point(92, 72);
             typeСomboBox.Name = "typeСomboBox";
-            typeСomboBox.Size = new Size(77, 23);
+            typeСomboBox.Size = new Size(427, 23);
             typeСomboBox.TabIndex = 21;
+            typeСomboBox.SelectedIndexChanged += typeСomboBox_SelectedIndexChanged;
             // 
             // descriptionTextBox
             // 
@@ -372,7 +372,7 @@
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(134, 30);
             searchButton.TabIndex = 14;
-            searchButton.Text = "Search";
+            searchButton.Text = "Пошук";
             searchButton.UseVisualStyleBackColor = true;
             searchButton.Click += searchButton_Click;
             // 
@@ -391,13 +391,6 @@
             resistanceLabel.Size = new Size(33, 15);
             resistanceLabel.TabIndex = 6;
             resistanceLabel.Text = "Опір";
-            // 
-            // typeTextBox
-            // 
-            typeTextBox.Location = new Point(92, 72);
-            typeTextBox.Name = "typeTextBox";
-            typeTextBox.Size = new Size(427, 23);
-            typeTextBox.TabIndex = 5;
             // 
             // typeLabel
             // 
@@ -545,7 +538,7 @@
         private Panel panel1;
         private TextBox resistanceTextBox;
         private Label resistanceLabel;
-        private TextBox typeTextBox;
+        private TextBox typeTextBox2;
         private Label typeLabel;
         private TextBox nameTextBox;
         private Label nameLabel;

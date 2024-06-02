@@ -12,7 +12,7 @@ namespace Radio_handbook.Models
         public List<RadioComponent> RadioComponents { get; set; }
         public Handbook() 
         {
-            RadioComponents = FillWithTestData(1);
+            RadioComponents = FillWithTestData(3);
         }
 
         public List<RadioComponent> FillWithTestData(int n)
@@ -23,11 +23,37 @@ namespace Radio_handbook.Models
                 Components.Add(new RadioComponent
                 {
                     Id = i,
-                    Name = $"resistor{i}",
-                    Type = $"type{i}",
+                    Name = $"Резистор{i}",
+                    Type = "Резистор",
                     Resistance = i,
-                    Capacitance = i,
+                    Capacitance = null,
+                    Inductance = null,
+                    Description = $"decripton{i}"
+                });
+            }
+            for (int i = 1; i <= n; i++)
+            {
+                Components.Add(new RadioComponent
+                {
+                    Id = i,
+                    Name = $"Котушка індуктивності{i}",
+                    Type = "Котушка індуктивності",
+                    Resistance = null,
+                    Capacitance = null,
                     Inductance = i,
+                    Description = $"decripton{i}"
+                });
+            }
+            for (int i = 1; i <= n; i++)
+            {
+                Components.Add(new RadioComponent
+                {
+                    Id = i,
+                    Name = $"Конденсатор{i}",
+                    Type = "Конденсатор",
+                    Resistance = null,
+                    Capacitance = i,
+                    Inductance = null,
                     Description = $"decripton{i}"
                 });
             }

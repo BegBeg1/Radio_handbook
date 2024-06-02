@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Radio_handbook.Forms
 {
@@ -19,8 +20,40 @@ namespace Radio_handbook.Forms
         public MainForm()
         {
             InitializeComponent();
+            typeСomboBox.SelectedIndex = 0;
             searchButton_Click(null, null);
-
+        }
+        private void typeСomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (typeСomboBox.SelectedIndex)
+            {
+                case 0:
+                    resistanceTextBox.Enabled = true;
+                    capacitanceTextBox.Enabled = true;
+                    inductanceTextBox.Enabled = true;
+                    break;
+                case 1:
+                    resistanceTextBox.Enabled = true;
+                    capacitanceTextBox.Text = "";
+                    capacitanceTextBox.Enabled = false;
+                    inductanceTextBox.Text = "";
+                    inductanceTextBox.Enabled = false;
+                    break;
+                case 2:
+                    resistanceTextBox.Text = "";
+                    resistanceTextBox.Enabled = false;
+                    capacitanceTextBox.Enabled = true;
+                    inductanceTextBox.Text = "";
+                    inductanceTextBox.Enabled = false;
+                    break;
+                case 3:
+                    resistanceTextBox.Text = "";
+                    resistanceTextBox.Enabled = false;
+                    capacitanceTextBox.Text = "";
+                    capacitanceTextBox.Enabled = false;
+                    inductanceTextBox.Enabled = true;
+                    break;
+            }
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -58,7 +91,7 @@ namespace Radio_handbook.Forms
         }
         private void searchButton_Click(object sender, EventArgs e)
         {
-            var result = handbook.Search(idTextBox.Text.Trim(), nameTextBox.Text.Trim(), typeTextBox.Text.Trim(),
+            var result = handbook.Search(idTextBox.Text.Trim(), nameTextBox.Text.Trim(), typeСomboBox.Text.Trim(),
                                             resistanceTextBox.Text.Trim(), capacitanceTextBox.Text.Trim(),
                                             inductanceTextBox.Text.Trim(), descriptionTextBox.Text.Trim());
             dataGridView1.DataSource = result;

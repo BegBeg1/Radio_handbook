@@ -45,12 +45,14 @@
             nameLabel = new Label();
             idTextBox = new TextBox();
             idLabel = new Label();
+            typeСomboBox = new ComboBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(typeСomboBox);
             panel1.Controls.Add(cancelButton);
             panel1.Controls.Add(okButton);
             panel1.Controls.Add(descriptionTextBox);
@@ -159,7 +161,7 @@
             // 
             // typeTextBox
             // 
-            typeTextBox.Location = new Point(94, 61);
+            typeTextBox.Location = new Point(66, 221);
             typeTextBox.Name = "typeTextBox";
             typeTextBox.Size = new Size(427, 23);
             typeTextBox.TabIndex = 19;
@@ -207,6 +209,16 @@
             idLabel.TabIndex = 14;
             idLabel.Text = "Id";
             // 
+            // typeСomboBox
+            // 
+            typeСomboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            typeСomboBox.FormattingEnabled = true;
+            typeСomboBox.Items.AddRange(new object[] { "", "Резистор", "Конденсатор", "Котушка індуктивності" });
+            typeСomboBox.Location = new Point(94, 61);
+            typeСomboBox.Name = "typeСomboBox";
+            typeСomboBox.Size = new Size(427, 23);
+            typeСomboBox.TabIndex = 30;
+            // 
             // AddComponentForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -239,5 +251,6 @@
         private Label nameLabel;
         private TextBox idTextBox;
         private Label idLabel;
+        private ComboBox typeСomboBox;
     }
 }
