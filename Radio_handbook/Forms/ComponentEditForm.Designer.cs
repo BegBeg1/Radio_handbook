@@ -81,16 +81,18 @@
             cancelButton.TabIndex = 29;
             cancelButton.Text = "Cancel";
             cancelButton.UseVisualStyleBackColor = true;
+            cancelButton.Click += this.cancelButton_Click;
             // 
             // okButton
             // 
+            okButton.DialogResult = DialogResult.OK;
             okButton.Location = new Point(106, 211);
             okButton.Name = "okButton";
             okButton.Size = new Size(114, 29);
             okButton.TabIndex = 28;
             okButton.Text = "Ok";
             okButton.UseVisualStyleBackColor = true;
-            okButton.Click += this.okButton_Click;
+            okButton.Click += okButton_Click;
             // 
             // descriptionTextBox
             // 
@@ -192,6 +194,7 @@
             // 
             idTextBox.Location = new Point(94, 3);
             idTextBox.Name = "idTextBox";
+            idTextBox.ReadOnly = true;
             idTextBox.Size = new Size(427, 23);
             idTextBox.TabIndex = 15;
             // 

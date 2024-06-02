@@ -30,14 +30,23 @@ namespace Radio_handbook.Forms
         }
         
         private void okButton_Click(object sender, EventArgs e)
-        { 
-            radioComponent.Id = Convert.ToInt32(idTextBox.Text);
-            radioComponent.Name = nameTextBox.Text;
-            radioComponent.Type = typeTextBox.Text;
-            radioComponent.Resistance = Convert.ToDouble(resistanceTextBox.Text);
-            radioComponent.Capacitance = Convert.ToDouble(capacitanceLabel.Text);
-            radioComponent.Inductance = Convert.ToDouble(inductanceLabel.Text);
-            radioComponent.Description = descriptionTextBox.Text;
+        {
+            DialogResult result = MessageBox.Show("Ви впевнені, що хочете зберегти зміни?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                radioComponent.Id = Convert.ToInt32(idTextBox.Text);
+                radioComponent.Name = nameTextBox.Text;
+                radioComponent.Type = typeTextBox.Text;
+                radioComponent.Resistance = Convert.ToDouble(resistanceTextBox.Text);
+                radioComponent.Capacitance = Convert.ToDouble(capacitanceTextBox.Text);
+                radioComponent.Inductance = Convert.ToDouble(inductanceTextBox.Text);
+                radioComponent.Description = descriptionTextBox.Text;
+                Close();
+            }
+        }
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -34,6 +34,7 @@ namespace Radio_handbook.Models
             }
             return Components;
         }
+
         public List <RadioComponent> Search(string id, string name, string type, string resistance, 
                                             string capacitance, string inductance, string description)
         {
@@ -53,10 +54,5 @@ namespace Radio_handbook.Models
             }
             return result ;
         }
-
-        //internal List<RadioComponent> Search(string name, string r)
-        //{
-        //    return Components;
-        //}
     }
 }
