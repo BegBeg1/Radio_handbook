@@ -60,15 +60,24 @@
             toolStripSeparator5 = new ToolStripSeparator();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
-            nameLabel = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            Label = new Label();
-            textBox3 = new TextBox();
-            label3 = new Label();
-            textBox4 = new TextBox();
-            label4 = new Label();
+            textBox8 = new TextBox();
+            descriptionLabel = new Label();
+            textBox7 = new TextBox();
+            inductanceLabel = new Label();
+            textBox6 = new TextBox();
+            capacitanceLabel = new Label();
             searchButton = new Button();
+            textBox4 = new TextBox();
+            resistanceLabel = new Label();
+            typeTextBox = new TextBox();
+            typeLabel = new Label();
+            nameTextBox = new TextBox();
+            nameLabel = new Label();
+            idTextBox = new TextBox();
+            idLabel = new Label();
+            addButton = new Button();
+            changeButton = new Button();
+            deleteButton = new Button();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -78,7 +87,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, toolsToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(863, 24);
+            menuStrip1.Size = new Size(913, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -275,101 +284,187 @@
             // 
             panel1.Anchor = AnchorStyles.Top;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(textBox8);
+            panel1.Controls.Add(descriptionLabel);
+            panel1.Controls.Add(textBox7);
+            panel1.Controls.Add(inductanceLabel);
+            panel1.Controls.Add(textBox6);
+            panel1.Controls.Add(capacitanceLabel);
             panel1.Controls.Add(searchButton);
             panel1.Controls.Add(textBox4);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(Label);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(resistanceLabel);
+            panel1.Controls.Add(typeTextBox);
+            panel1.Controls.Add(typeLabel);
+            panel1.Controls.Add(nameTextBox);
             panel1.Controls.Add(nameLabel);
-            panel1.Location = new Point(166, 27);
+            panel1.Controls.Add(idTextBox);
+            panel1.Controls.Add(idLabel);
+            panel1.Location = new Point(190, 27);
             panel1.Name = "panel1";
-            panel1.Size = new Size(530, 240);
+            panel1.Size = new Size(533, 258);
             panel1.TabIndex = 1;
             // 
-            // nameLabel
+            // textBox8
             // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new Point(24, 16);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(39, 15);
-            nameLabel.TabIndex = 0;
-            nameLabel.Text = "Name";
+            textBox8.Location = new Point(92, 188);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(427, 23);
+            textBox8.TabIndex = 16;
             // 
-            // textBox1
+            // descriptionLabel
             // 
-            textBox1.Location = new Point(77, 13);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(427, 23);
-            textBox1.TabIndex = 1;
+            descriptionLabel.AutoSize = true;
+            descriptionLabel.Location = new Point(8, 191);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new Size(36, 15);
+            descriptionLabel.TabIndex = 15;
+            descriptionLabel.Text = "Опис";
             // 
-            // textBox2
+            // textBox7
             // 
-            textBox2.Location = new Point(77, 42);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(427, 23);
-            textBox2.TabIndex = 3;
+            textBox7.Location = new Point(92, 159);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(427, 23);
+            textBox7.TabIndex = 14;
             // 
-            // Label
+            // inductanceLabel
             // 
-            Label.AutoSize = true;
-            Label.Location = new Point(24, 45);
-            Label.Name = "Label";
-            Label.Size = new Size(38, 15);
-            Label.TabIndex = 2;
-            Label.Text = "label2";
+            inductanceLabel.AutoSize = true;
+            inductanceLabel.Location = new Point(8, 162);
+            inductanceLabel.Name = "inductanceLabel";
+            inductanceLabel.Size = new Size(80, 15);
+            inductanceLabel.TabIndex = 13;
+            inductanceLabel.Text = "Індуктивність";
             // 
-            // textBox3
+            // textBox6
             // 
-            textBox3.Location = new Point(77, 71);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(427, 23);
-            textBox3.TabIndex = 5;
+            textBox6.Location = new Point(92, 130);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(427, 23);
+            textBox6.TabIndex = 12;
             // 
-            // label3
+            // capacitanceLabel
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(24, 74);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 4;
-            label3.Text = "label3";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(77, 100);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(427, 23);
-            textBox4.TabIndex = 7;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(24, 103);
-            label4.Name = "label4";
-            label4.Size = new Size(38, 15);
-            label4.TabIndex = 6;
-            label4.Text = "label4";
+            capacitanceLabel.AutoSize = true;
+            capacitanceLabel.Location = new Point(8, 133);
+            capacitanceLabel.Name = "capacitanceLabel";
+            capacitanceLabel.Size = new Size(50, 15);
+            capacitanceLabel.TabIndex = 11;
+            capacitanceLabel.Text = "Ємність";
             // 
             // searchButton
             // 
-            searchButton.Location = new Point(200, 187);
+            searchButton.Location = new Point(201, 217);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(134, 30);
             searchButton.TabIndex = 8;
             searchButton.Text = "Search";
             searchButton.UseVisualStyleBackColor = true;
+            searchButton.Click += searchButton_Click;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(92, 101);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(427, 23);
+            textBox4.TabIndex = 7;
+            // 
+            // resistanceLabel
+            // 
+            resistanceLabel.AutoSize = true;
+            resistanceLabel.Location = new Point(8, 104);
+            resistanceLabel.Name = "resistanceLabel";
+            resistanceLabel.Size = new Size(33, 15);
+            resistanceLabel.TabIndex = 6;
+            resistanceLabel.Text = "Опір";
+            // 
+            // typeTextBox
+            // 
+            typeTextBox.Location = new Point(92, 72);
+            typeTextBox.Name = "typeTextBox";
+            typeTextBox.Size = new Size(427, 23);
+            typeTextBox.TabIndex = 5;
+            // 
+            // typeLabel
+            // 
+            typeLabel.AutoSize = true;
+            typeLabel.Location = new Point(8, 75);
+            typeLabel.Name = "typeLabel";
+            typeLabel.Size = new Size(27, 15);
+            typeLabel.TabIndex = 4;
+            typeLabel.Text = "Тип";
+            // 
+            // nameTextBox
+            // 
+            nameTextBox.Location = new Point(92, 43);
+            nameTextBox.Name = "nameTextBox";
+            nameTextBox.Size = new Size(427, 23);
+            nameTextBox.TabIndex = 3;
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new Point(8, 46);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new Size(39, 15);
+            nameLabel.TabIndex = 2;
+            nameLabel.Text = "Назва";
+            // 
+            // idTextBox
+            // 
+            idTextBox.Location = new Point(92, 14);
+            idTextBox.Name = "idTextBox";
+            idTextBox.Size = new Size(427, 23);
+            idTextBox.TabIndex = 1;
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new Point(8, 17);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new Size(17, 15);
+            idLabel.TabIndex = 0;
+            idLabel.Text = "Id";
+            // 
+            // addButton
+            // 
+            addButton.Location = new Point(247, 324);
+            addButton.Name = "addButton";
+            addButton.Size = new Size(110, 30);
+            addButton.TabIndex = 17;
+            addButton.Text = "Додати";
+            addButton.UseVisualStyleBackColor = true;
+            // 
+            // changeButton
+            // 
+            changeButton.Location = new Point(392, 324);
+            changeButton.Name = "changeButton";
+            changeButton.Size = new Size(110, 30);
+            changeButton.TabIndex = 18;
+            changeButton.Text = "Змінити";
+            changeButton.UseVisualStyleBackColor = true;
+            // 
+            // deleteButton
+            // 
+            deleteButton.Location = new Point(527, 324);
+            deleteButton.Name = "deleteButton";
+            deleteButton.Size = new Size(110, 30);
+            deleteButton.TabIndex = 19;
+            deleteButton.Text = "Видалити";
+            deleteButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(863, 451);
+            ClientSize = new Size(913, 482);
+            Controls.Add(deleteButton);
+            Controls.Add(changeButton);
+            Controls.Add(addButton);
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            MinimumSize = new Size(560, 460);
             Name = "MainForm";
             Text = "MainForm";
             menuStrip1.ResumeLayout(false);
@@ -414,13 +509,22 @@
         private ToolStripMenuItem aboutToolStripMenuItem;
         private Panel panel1;
         private TextBox textBox4;
-        private Label label4;
-        private TextBox textBox3;
-        private Label label3;
-        private TextBox textBox2;
-        private Label Label;
-        private TextBox textBox1;
+        private Label resistanceLabel;
+        private TextBox typeTextBox;
+        private Label typeLabel;
+        private TextBox nameTextBox;
         private Label nameLabel;
+        private TextBox idTextBox;
+        private Label idLabel;
         private Button searchButton;
+        private TextBox textBox6;
+        private Label capacitanceLabel;
+        private TextBox textBox8;
+        private Label descriptionLabel;
+        private TextBox textBox7;
+        private Label inductanceLabel;
+        private Button addButton;
+        private Button changeButton;
+        private Button deleteButton;
     }
 }

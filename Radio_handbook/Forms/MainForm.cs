@@ -25,5 +25,9 @@ namespace Radio_handbook.Forms
                 Close();
             }   
         }
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
