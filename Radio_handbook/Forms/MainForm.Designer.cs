@@ -60,14 +60,15 @@
             toolStripSeparator5 = new ToolStripSeparator();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
-            label1 = new Label();
+            nameLabel = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
-            label2 = new Label();
+            Label = new Label();
             textBox3 = new TextBox();
             label3 = new Label();
             textBox4 = new TextBox();
             label4 = new Label();
+            searchButton = new Button();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -77,7 +78,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, toolsToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(804, 24);
+            menuStrip1.Size = new Size(863, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -93,7 +94,7 @@
             newToolStripMenuItem.Image = (Image)resources.GetObject("newToolStripMenuItem.Image");
             newToolStripMenuItem.ImageTransparentColor = Color.Magenta;
             newToolStripMenuItem.Name = "newToolStripMenuItem";
-            newToolStripMenuItem.Size = new Size(143, 22);
+            newToolStripMenuItem.Size = new Size(180, 22);
             newToolStripMenuItem.Text = "&New";
             // 
             // openToolStripMenuItem
@@ -101,39 +102,39 @@
             openToolStripMenuItem.Image = (Image)resources.GetObject("openToolStripMenuItem.Image");
             openToolStripMenuItem.ImageTransparentColor = Color.Magenta;
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(143, 22);
+            openToolStripMenuItem.Size = new Size(180, 22);
             openToolStripMenuItem.Text = "&Open";
             // 
             // toolStripSeparator
             // 
             toolStripSeparator.Name = "toolStripSeparator";
-            toolStripSeparator.Size = new Size(140, 6);
+            toolStripSeparator.Size = new Size(177, 6);
             // 
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Image = (Image)resources.GetObject("saveToolStripMenuItem.Image");
             saveToolStripMenuItem.ImageTransparentColor = Color.Magenta;
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(143, 22);
+            saveToolStripMenuItem.Size = new Size(180, 22);
             saveToolStripMenuItem.Text = "&Save";
             // 
             // saveAsToolStripMenuItem
             // 
             saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            saveAsToolStripMenuItem.Size = new Size(143, 22);
+            saveAsToolStripMenuItem.Size = new Size(180, 22);
             saveAsToolStripMenuItem.Text = "Save &As";
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(140, 6);
+            toolStripSeparator1.Size = new Size(177, 6);
             // 
             // printToolStripMenuItem
             // 
             printToolStripMenuItem.Image = (Image)resources.GetObject("printToolStripMenuItem.Image");
             printToolStripMenuItem.ImageTransparentColor = Color.Magenta;
             printToolStripMenuItem.Name = "printToolStripMenuItem";
-            printToolStripMenuItem.Size = new Size(143, 22);
+            printToolStripMenuItem.Size = new Size(180, 22);
             printToolStripMenuItem.Text = "&Print";
             // 
             // printPreviewToolStripMenuItem
@@ -141,18 +142,18 @@
             printPreviewToolStripMenuItem.Image = (Image)resources.GetObject("printPreviewToolStripMenuItem.Image");
             printPreviewToolStripMenuItem.ImageTransparentColor = Color.Magenta;
             printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            printPreviewToolStripMenuItem.Size = new Size(143, 22);
+            printPreviewToolStripMenuItem.Size = new Size(180, 22);
             printPreviewToolStripMenuItem.Text = "Print Pre&view";
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(140, 6);
+            toolStripSeparator2.Size = new Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(143, 22);
+            exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "E&xit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -274,27 +275,28 @@
             // 
             panel1.Anchor = AnchorStyles.Top;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(searchButton);
             panel1.Controls.Add(textBox4);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(textBox3);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(Label);
             panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(137, 27);
+            panel1.Controls.Add(nameLabel);
+            panel1.Location = new Point(166, 27);
             panel1.Name = "panel1";
             panel1.Size = new Size(530, 240);
             panel1.TabIndex = 1;
             // 
-            // label1
+            // nameLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(24, 16);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new Point(24, 16);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new Size(39, 15);
+            nameLabel.TabIndex = 0;
+            nameLabel.Text = "Name";
             // 
             // textBox1
             // 
@@ -310,14 +312,14 @@
             textBox2.Size = new Size(427, 23);
             textBox2.TabIndex = 3;
             // 
-            // label2
+            // Label
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(24, 45);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 2;
-            label2.Text = "label2";
+            Label.AutoSize = true;
+            Label.Location = new Point(24, 45);
+            Label.Name = "Label";
+            Label.Size = new Size(38, 15);
+            Label.TabIndex = 2;
+            Label.Text = "label2";
             // 
             // textBox3
             // 
@@ -351,11 +353,20 @@
             label4.TabIndex = 6;
             label4.Text = "label4";
             // 
+            // searchButton
+            // 
+            searchButton.Location = new Point(200, 187);
+            searchButton.Name = "searchButton";
+            searchButton.Size = new Size(134, 30);
+            searchButton.TabIndex = 8;
+            searchButton.Text = "Search";
+            searchButton.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(804, 451);
+            ClientSize = new Size(863, 451);
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
@@ -407,8 +418,9 @@
         private TextBox textBox3;
         private Label label3;
         private TextBox textBox2;
-        private Label label2;
+        private Label Label;
         private TextBox textBox1;
-        private Label label1;
+        private Label nameLabel;
+        private Button searchButton;
     }
 }

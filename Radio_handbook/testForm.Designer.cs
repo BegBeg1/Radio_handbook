@@ -358,7 +358,7 @@
             // 
             // resistorBindingSource
             // 
-            resistorBindingSource.DataSource = typeof(Models.Resistor);
+            resistorBindingSource.DataSource = typeof(Models.RadioComponent);
             // 
             // MainForm
             // 

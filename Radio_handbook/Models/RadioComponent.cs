@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace Radio_handbook.Models
 {
-    public class Resistor
+    public class RadioComponent
     {
         public int Id { get; set; }
+        public string Type { get; set; }
         public string Name { get; set; }
+        public double? Resistance { get; set; }
+        public double? RatedVoltage { get; set; }
+        public double? Capacitance { get; set; }
+        public double? Inductance { get; set; }
         public string Description { get; set; }
-        public double R { get; set; }
     }
 }
