@@ -60,14 +60,14 @@
             toolStripSeparator5 = new ToolStripSeparator();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
-            textBox8 = new TextBox();
+            descriptionTextBox = new TextBox();
             descriptionLabel = new Label();
-            textBox7 = new TextBox();
+            inductanceTextBox = new TextBox();
             inductanceLabel = new Label();
-            textBox6 = new TextBox();
+            capacitanceTextBox = new TextBox();
             capacitanceLabel = new Label();
             searchButton = new Button();
-            textBox4 = new TextBox();
+            resistanceTextBox = new TextBox();
             resistanceLabel = new Label();
             typeTextBox = new TextBox();
             typeLabel = new Label();
@@ -78,6 +78,7 @@
             addButton = new Button();
             changeButton = new Button();
             deleteButton = new Button();
+            listBox = new ListBox();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -87,7 +88,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, toolsToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(913, 24);
+            menuStrip1.Size = new Size(971, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -103,7 +104,7 @@
             newToolStripMenuItem.Image = (Image)resources.GetObject("newToolStripMenuItem.Image");
             newToolStripMenuItem.ImageTransparentColor = Color.Magenta;
             newToolStripMenuItem.Name = "newToolStripMenuItem";
-            newToolStripMenuItem.Size = new Size(180, 22);
+            newToolStripMenuItem.Size = new Size(143, 22);
             newToolStripMenuItem.Text = "&New";
             // 
             // openToolStripMenuItem
@@ -111,39 +112,39 @@
             openToolStripMenuItem.Image = (Image)resources.GetObject("openToolStripMenuItem.Image");
             openToolStripMenuItem.ImageTransparentColor = Color.Magenta;
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(180, 22);
+            openToolStripMenuItem.Size = new Size(143, 22);
             openToolStripMenuItem.Text = "&Open";
             // 
             // toolStripSeparator
             // 
             toolStripSeparator.Name = "toolStripSeparator";
-            toolStripSeparator.Size = new Size(177, 6);
+            toolStripSeparator.Size = new Size(140, 6);
             // 
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Image = (Image)resources.GetObject("saveToolStripMenuItem.Image");
             saveToolStripMenuItem.ImageTransparentColor = Color.Magenta;
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(180, 22);
+            saveToolStripMenuItem.Size = new Size(143, 22);
             saveToolStripMenuItem.Text = "&Save";
             // 
             // saveAsToolStripMenuItem
             // 
             saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            saveAsToolStripMenuItem.Size = new Size(180, 22);
+            saveAsToolStripMenuItem.Size = new Size(143, 22);
             saveAsToolStripMenuItem.Text = "Save &As";
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(140, 6);
             // 
             // printToolStripMenuItem
             // 
             printToolStripMenuItem.Image = (Image)resources.GetObject("printToolStripMenuItem.Image");
             printToolStripMenuItem.ImageTransparentColor = Color.Magenta;
             printToolStripMenuItem.Name = "printToolStripMenuItem";
-            printToolStripMenuItem.Size = new Size(180, 22);
+            printToolStripMenuItem.Size = new Size(143, 22);
             printToolStripMenuItem.Text = "&Print";
             // 
             // printPreviewToolStripMenuItem
@@ -151,18 +152,18 @@
             printPreviewToolStripMenuItem.Image = (Image)resources.GetObject("printPreviewToolStripMenuItem.Image");
             printPreviewToolStripMenuItem.ImageTransparentColor = Color.Magenta;
             printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            printPreviewToolStripMenuItem.Size = new Size(180, 22);
+            printPreviewToolStripMenuItem.Size = new Size(143, 22);
             printPreviewToolStripMenuItem.Text = "Print Pre&view";
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(177, 6);
+            toolStripSeparator2.Size = new Size(140, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(143, 22);
             exitToolStripMenuItem.Text = "E&xit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -284,14 +285,14 @@
             // 
             panel1.Anchor = AnchorStyles.Top;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(textBox8);
+            panel1.Controls.Add(descriptionTextBox);
             panel1.Controls.Add(descriptionLabel);
-            panel1.Controls.Add(textBox7);
+            panel1.Controls.Add(inductanceTextBox);
             panel1.Controls.Add(inductanceLabel);
-            panel1.Controls.Add(textBox6);
+            panel1.Controls.Add(capacitanceTextBox);
             panel1.Controls.Add(capacitanceLabel);
             panel1.Controls.Add(searchButton);
-            panel1.Controls.Add(textBox4);
+            panel1.Controls.Add(resistanceTextBox);
             panel1.Controls.Add(resistanceLabel);
             panel1.Controls.Add(typeTextBox);
             panel1.Controls.Add(typeLabel);
@@ -299,17 +300,17 @@
             panel1.Controls.Add(nameLabel);
             panel1.Controls.Add(idTextBox);
             panel1.Controls.Add(idLabel);
-            panel1.Location = new Point(190, 27);
+            panel1.Location = new Point(219, 27);
             panel1.Name = "panel1";
             panel1.Size = new Size(533, 258);
             panel1.TabIndex = 1;
             // 
-            // textBox8
+            // descriptionTextBox
             // 
-            textBox8.Location = new Point(92, 188);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(427, 23);
-            textBox8.TabIndex = 16;
+            descriptionTextBox.Location = new Point(92, 188);
+            descriptionTextBox.Name = "descriptionTextBox";
+            descriptionTextBox.Size = new Size(427, 23);
+            descriptionTextBox.TabIndex = 16;
             // 
             // descriptionLabel
             // 
@@ -320,12 +321,12 @@
             descriptionLabel.TabIndex = 15;
             descriptionLabel.Text = "Опис";
             // 
-            // textBox7
+            // inductanceTextBox
             // 
-            textBox7.Location = new Point(92, 159);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(427, 23);
-            textBox7.TabIndex = 14;
+            inductanceTextBox.Location = new Point(92, 159);
+            inductanceTextBox.Name = "inductanceTextBox";
+            inductanceTextBox.Size = new Size(427, 23);
+            inductanceTextBox.TabIndex = 14;
             // 
             // inductanceLabel
             // 
@@ -336,12 +337,12 @@
             inductanceLabel.TabIndex = 13;
             inductanceLabel.Text = "Індуктивність";
             // 
-            // textBox6
+            // capacitanceTextBox
             // 
-            textBox6.Location = new Point(92, 130);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(427, 23);
-            textBox6.TabIndex = 12;
+            capacitanceTextBox.Location = new Point(92, 130);
+            capacitanceTextBox.Name = "capacitanceTextBox";
+            capacitanceTextBox.Size = new Size(427, 23);
+            capacitanceTextBox.TabIndex = 12;
             // 
             // capacitanceLabel
             // 
@@ -362,12 +363,12 @@
             searchButton.UseVisualStyleBackColor = true;
             searchButton.Click += searchButton_Click;
             // 
-            // textBox4
+            // resistanceTextBox
             // 
-            textBox4.Location = new Point(92, 101);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(427, 23);
-            textBox4.TabIndex = 7;
+            resistanceTextBox.Location = new Point(92, 101);
+            resistanceTextBox.Name = "resistanceTextBox";
+            resistanceTextBox.Size = new Size(427, 23);
+            resistanceTextBox.TabIndex = 7;
             // 
             // resistanceLabel
             // 
@@ -428,7 +429,8 @@
             // 
             // addButton
             // 
-            addButton.Location = new Point(247, 324);
+            addButton.Anchor = AnchorStyles.Top;
+            addButton.Location = new Point(300, 460);
             addButton.Name = "addButton";
             addButton.Size = new Size(110, 30);
             addButton.TabIndex = 17;
@@ -437,7 +439,8 @@
             // 
             // changeButton
             // 
-            changeButton.Location = new Point(392, 324);
+            changeButton.Anchor = AnchorStyles.Top;
+            changeButton.Location = new Point(445, 460);
             changeButton.Name = "changeButton";
             changeButton.Size = new Size(110, 30);
             changeButton.TabIndex = 18;
@@ -446,18 +449,30 @@
             // 
             // deleteButton
             // 
-            deleteButton.Location = new Point(527, 324);
+            deleteButton.Anchor = AnchorStyles.Top;
+            deleteButton.Location = new Point(580, 460);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(110, 30);
             deleteButton.TabIndex = 19;
             deleteButton.Text = "Видалити";
             deleteButton.UseVisualStyleBackColor = true;
             // 
+            // listBox
+            // 
+            listBox.Anchor = AnchorStyles.Top;
+            listBox.FormattingEnabled = true;
+            listBox.ItemHeight = 15;
+            listBox.Location = new Point(214, 317);
+            listBox.Name = "listBox";
+            listBox.Size = new Size(540, 124);
+            listBox.TabIndex = 20;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(913, 482);
+            ClientSize = new Size(971, 482);
+            Controls.Add(listBox);
             Controls.Add(deleteButton);
             Controls.Add(changeButton);
             Controls.Add(addButton);
@@ -508,7 +523,7 @@
         private ToolStripSeparator toolStripSeparator5;
         private ToolStripMenuItem aboutToolStripMenuItem;
         private Panel panel1;
-        private TextBox textBox4;
+        private TextBox resistanceTextBox;
         private Label resistanceLabel;
         private TextBox typeTextBox;
         private Label typeLabel;
@@ -517,14 +532,15 @@
         private TextBox idTextBox;
         private Label idLabel;
         private Button searchButton;
-        private TextBox textBox6;
+        private TextBox capacitanceTextBox;
         private Label capacitanceLabel;
-        private TextBox textBox8;
+        private TextBox descriptionTextBox;
         private Label descriptionLabel;
-        private TextBox textBox7;
+        private TextBox inductanceTextBox;
         private Label inductanceLabel;
         private Button addButton;
         private Button changeButton;
         private Button deleteButton;
+        private ListBox listBox;
     }
 }
