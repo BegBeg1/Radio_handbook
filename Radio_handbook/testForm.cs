@@ -2,10 +2,10 @@ using Radio_handbook.Models;
 
 namespace Radio_handbook
 {
-    public partial class MainForm : Form
+    public partial class testForm : Form
     {
         private Handbook handbook = new Handbook();
-        public MainForm()
+        public testForm()
         {
             InitializeComponent();
         }
@@ -42,8 +42,8 @@ namespace Radio_handbook
 
         private void seachBotton_Click(object sender, EventArgs e)
         {
-            List<Resistor> result = handbook.Search(nameBox.Text, rBox.Text);
-            resistorBindingSource.DataSource = result;
+            //List<Resistor> result = handbook.Search(nameBox.Text, rBox.Text);
+            //resistorBindingSource.DataSource = result;
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

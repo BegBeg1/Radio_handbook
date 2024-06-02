@@ -1,4 +1,5 @@
 using Radio_handbook.Models;
+using Radio_handbook.Forms;
 using System.Diagnostics.Eventing.Reader;
 
 namespace Radio_handbook
@@ -15,7 +16,6 @@ namespace Radio_handbook
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new MainForm());
-
         }
     }
 }
