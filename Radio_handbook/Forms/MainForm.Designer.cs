@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
@@ -79,9 +80,18 @@
             changeButton = new Button();
             deleteButton = new Button();
             dataGridView1 = new DataGridView();
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            typeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            resistanceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            capacitanceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            inductanceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            descriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            radioComponentBindingSource = new BindingSource(components);
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -285,7 +295,7 @@
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Top;
+            panel1.Anchor = AnchorStyles.None;
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(typeСomboBox);
             panel1.Controls.Add(descriptionTextBox);
@@ -435,7 +445,7 @@
             // 
             // addButton
             // 
-            addButton.Anchor = AnchorStyles.Top;
+            addButton.Anchor = AnchorStyles.None;
             addButton.Location = new Point(212, 510);
             addButton.Name = "addButton";
             addButton.Size = new Size(110, 30);
@@ -446,7 +456,7 @@
             // 
             // changeButton
             // 
-            changeButton.Anchor = AnchorStyles.Top;
+            changeButton.Anchor = AnchorStyles.None;
             changeButton.Location = new Point(357, 510);
             changeButton.Name = "changeButton";
             changeButton.Size = new Size(110, 30);
@@ -457,7 +467,7 @@
             // 
             // deleteButton
             // 
-            deleteButton.Anchor = AnchorStyles.Top;
+            deleteButton.Anchor = AnchorStyles.None;
             deleteButton.Location = new Point(492, 510);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(110, 30);
@@ -470,14 +480,72 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.Anchor = AnchorStyles.Top;
+            dataGridView1.Anchor = AnchorStyles.None;
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, typeDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn, resistanceDataGridViewTextBoxColumn, capacitanceDataGridViewTextBoxColumn, inductanceDataGridViewTextBoxColumn, descriptionDataGridViewTextBoxColumn });
+            dataGridView1.DataSource = radioComponentBindingSource;
             dataGridView1.Location = new Point(4, 291);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersVisible = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(782, 213);
             dataGridView1.TabIndex = 20;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            typeDataGridViewTextBoxColumn.HeaderText = "Тип";
+            typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            typeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            nameDataGridViewTextBoxColumn.HeaderText = "Назва";
+            nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // resistanceDataGridViewTextBoxColumn
+            // 
+            resistanceDataGridViewTextBoxColumn.DataPropertyName = "Resistance";
+            resistanceDataGridViewTextBoxColumn.HeaderText = "Опір";
+            resistanceDataGridViewTextBoxColumn.Name = "resistanceDataGridViewTextBoxColumn";
+            resistanceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // capacitanceDataGridViewTextBoxColumn
+            // 
+            capacitanceDataGridViewTextBoxColumn.DataPropertyName = "Capacitance";
+            capacitanceDataGridViewTextBoxColumn.HeaderText = "Ємність";
+            capacitanceDataGridViewTextBoxColumn.Name = "capacitanceDataGridViewTextBoxColumn";
+            capacitanceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // inductanceDataGridViewTextBoxColumn
+            // 
+            inductanceDataGridViewTextBoxColumn.DataPropertyName = "Inductance";
+            inductanceDataGridViewTextBoxColumn.HeaderText = "Індуктивність";
+            inductanceDataGridViewTextBoxColumn.Name = "inductanceDataGridViewTextBoxColumn";
+            inductanceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            descriptionDataGridViewTextBoxColumn.HeaderText = "Опис";
+            descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // radioComponentBindingSource
+            // 
+            radioComponentBindingSource.DataSource = typeof(Models.RadioComponent);
             // 
             // MainForm
             // 
@@ -499,6 +567,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -556,5 +625,13 @@
         private Button deleteButton;
         private DataGridView dataGridView1;
         private ComboBox typeСomboBox;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn resistanceDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn capacitanceDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn inductanceDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private BindingSource radioComponentBindingSource;
     }
 }
