@@ -16,9 +16,14 @@ namespace Radio_handbook.Forms
         {
             InitializeComponent();
         }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult result = MessageBox.Show("Ви впевнені, що хочете закрити програму?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Close();
+            }   
         }
     }
 }
