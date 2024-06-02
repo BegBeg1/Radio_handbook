@@ -78,9 +78,10 @@
             addButton = new Button();
             changeButton = new Button();
             deleteButton = new Button();
-            listBox = new ListBox();
+            dataGridView1 = new DataGridView();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -88,7 +89,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, toolsToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(971, 24);
+            menuStrip1.Size = new Size(794, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -280,6 +281,7 @@
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             aboutToolStripMenuItem.Size = new Size(122, 22);
             aboutToolStripMenuItem.Text = "&About...";
+            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // panel1
             // 
@@ -300,7 +302,7 @@
             panel1.Controls.Add(nameLabel);
             panel1.Controls.Add(idTextBox);
             panel1.Controls.Add(idLabel);
-            panel1.Location = new Point(219, 27);
+            panel1.Location = new Point(131, 27);
             panel1.Name = "panel1";
             panel1.Size = new Size(533, 258);
             panel1.TabIndex = 1;
@@ -310,7 +312,7 @@
             descriptionTextBox.Location = new Point(92, 188);
             descriptionTextBox.Name = "descriptionTextBox";
             descriptionTextBox.Size = new Size(427, 23);
-            descriptionTextBox.TabIndex = 16;
+            descriptionTextBox.TabIndex = 13;
             // 
             // descriptionLabel
             // 
@@ -318,7 +320,7 @@
             descriptionLabel.Location = new Point(8, 191);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new Size(36, 15);
-            descriptionLabel.TabIndex = 15;
+            descriptionLabel.TabIndex = 12;
             descriptionLabel.Text = "Опис";
             // 
             // inductanceTextBox
@@ -326,7 +328,7 @@
             inductanceTextBox.Location = new Point(92, 159);
             inductanceTextBox.Name = "inductanceTextBox";
             inductanceTextBox.Size = new Size(427, 23);
-            inductanceTextBox.TabIndex = 14;
+            inductanceTextBox.TabIndex = 11;
             // 
             // inductanceLabel
             // 
@@ -334,7 +336,7 @@
             inductanceLabel.Location = new Point(8, 162);
             inductanceLabel.Name = "inductanceLabel";
             inductanceLabel.Size = new Size(80, 15);
-            inductanceLabel.TabIndex = 13;
+            inductanceLabel.TabIndex = 10;
             inductanceLabel.Text = "Індуктивність";
             // 
             // capacitanceTextBox
@@ -342,7 +344,7 @@
             capacitanceTextBox.Location = new Point(92, 130);
             capacitanceTextBox.Name = "capacitanceTextBox";
             capacitanceTextBox.Size = new Size(427, 23);
-            capacitanceTextBox.TabIndex = 12;
+            capacitanceTextBox.TabIndex = 9;
             // 
             // capacitanceLabel
             // 
@@ -350,7 +352,7 @@
             capacitanceLabel.Location = new Point(8, 133);
             capacitanceLabel.Name = "capacitanceLabel";
             capacitanceLabel.Size = new Size(50, 15);
-            capacitanceLabel.TabIndex = 11;
+            capacitanceLabel.TabIndex = 8;
             capacitanceLabel.Text = "Ємність";
             // 
             // searchButton
@@ -358,7 +360,7 @@
             searchButton.Location = new Point(201, 217);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(134, 30);
-            searchButton.TabIndex = 8;
+            searchButton.TabIndex = 14;
             searchButton.Text = "Search";
             searchButton.UseVisualStyleBackColor = true;
             searchButton.Click += searchButton_Click;
@@ -430,7 +432,7 @@
             // addButton
             // 
             addButton.Anchor = AnchorStyles.Top;
-            addButton.Location = new Point(300, 460);
+            addButton.Location = new Point(212, 510);
             addButton.Name = "addButton";
             addButton.Size = new Size(110, 30);
             addButton.TabIndex = 17;
@@ -440,7 +442,7 @@
             // changeButton
             // 
             changeButton.Anchor = AnchorStyles.Top;
-            changeButton.Location = new Point(445, 460);
+            changeButton.Location = new Point(357, 510);
             changeButton.Name = "changeButton";
             changeButton.Size = new Size(110, 30);
             changeButton.TabIndex = 18;
@@ -450,42 +452,43 @@
             // deleteButton
             // 
             deleteButton.Anchor = AnchorStyles.Top;
-            deleteButton.Location = new Point(580, 460);
+            deleteButton.Location = new Point(492, 510);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(110, 30);
             deleteButton.TabIndex = 19;
             deleteButton.Text = "Видалити";
             deleteButton.UseVisualStyleBackColor = true;
             // 
-            // listBox
+            // dataGridView1
             // 
-            listBox.Anchor = AnchorStyles.Top;
-            listBox.FormattingEnabled = true;
-            listBox.ItemHeight = 15;
-            listBox.Location = new Point(214, 317);
-            listBox.Name = "listBox";
-            listBox.Size = new Size(540, 124);
-            listBox.TabIndex = 20;
+            dataGridView1.Anchor = AnchorStyles.Top;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(4, 291);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(782, 213);
+            dataGridView1.TabIndex = 20;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(971, 482);
-            Controls.Add(listBox);
+            ClientSize = new Size(794, 541);
+            Controls.Add(dataGridView1);
             Controls.Add(deleteButton);
             Controls.Add(changeButton);
             Controls.Add(addButton);
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            MinimumSize = new Size(560, 460);
+            MinimumSize = new Size(810, 580);
             Name = "MainForm";
             Text = "MainForm";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -541,6 +544,6 @@
         private Button addButton;
         private Button changeButton;
         private Button deleteButton;
-        private ListBox listBox;
+        private DataGridView dataGridView1;
     }
 }
