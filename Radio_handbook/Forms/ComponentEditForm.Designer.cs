@@ -90,6 +90,7 @@
             okButton.TabIndex = 28;
             okButton.Text = "Ok";
             okButton.UseVisualStyleBackColor = true;
+            okButton.Click += this.okButton_Click;
             // 
             // descriptionTextBox
             // 

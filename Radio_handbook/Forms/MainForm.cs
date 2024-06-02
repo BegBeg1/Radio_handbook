@@ -14,6 +14,8 @@ namespace Radio_handbook.Forms
     public partial class MainForm : System.Windows.Forms.Form
     {
         Handbook handbook = new Handbook();
+        //DataTable table = new DataTable("table");
+
         public MainForm()
         {
             InitializeComponent();
@@ -32,13 +34,7 @@ namespace Radio_handbook.Forms
             var result = handbook.Search(idTextBox.Text, nameTextBox.Text, typeTextBox.Text, 
                                             resistanceTextBox.Text, capacitanceTextBox.Text, 
                                             inductanceTextBox.Text, descriptionTextBox.Text);
-            //listBox.Items.Clear();
-            //foreach (var item in result)
-            //{
-            //    listBox.Items.Add(item.Name);
-            //}
             dataGridView1.DataSource = result; 
-
         }
         private void aboutToolStripMenuItem_Click(Object sender, EventArgs e)
         {
