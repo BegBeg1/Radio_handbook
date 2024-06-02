@@ -19,8 +19,6 @@ namespace Radio_handbook.Forms
         {
             InitializeComponent();
 
-            //typeСomboBox.SelectedIndex = 0;
-
             nameTextBox.TextChanged += new EventHandler(TextChanged);
             resistanceTextBox.TextChanged += new EventHandler(TextChanged);
             capacitanceTextBox.TextChanged += new EventHandler(TextChanged);
@@ -50,12 +48,6 @@ namespace Radio_handbook.Forms
                 okButton.Enabled = true; 
             }
         }
-
-        //private void CheckTextBox()
-        //{
-        //    // Если текстовое поле пустое, кнопка неактивна
-        //    button1.Enabled = !string.IsNullOrWhiteSpace(textBox1.Text);
-        //}
         private void typeСomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (typeСomboBox.SelectedIndex)
