@@ -75,6 +75,29 @@ namespace Radio_handbook.Forms
                 return selectedRows[0].DataBoundItem as RadioComponent;
             }
         }
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            var result = handbook.Search(idTextBox.Text.Trim(), nameTextBox.Text.Trim(), typeСomboBox.Text.Trim(),
+                                            resistanceTextBox.Text.Trim(), capacitanceTextBox.Text.Trim(),
+                                            inductanceTextBox.Text.Trim(), descriptionTextBox.Text.Trim());
+            dataGridView1.DataSource = result;
+        }
+        private void addButton_Click(Object sender, EventArgs e)
+        {
+            var addComponentForm = new AddComponentForm(handbook.RadioComponents);
+            if (addComponentForm.ShowDialog() == DialogResult.OK)
+            {
+                searchButton_Click(null, null);
+            }
+        }
+        private void changeButton_Click(Object sender, EventArgs e)
+        {
+            var componentEditForm = new ComponentEditForm(SelectedComponent);
+            if (componentEditForm.ShowDialog() == DialogResult.OK)
+            {
+                searchButton_Click(null, null);
+            }
+        }
         private void deleteButton_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show($"Ви впевнені, що хочете видалити елемент {SelectedComponent.Name}?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -89,33 +112,25 @@ namespace Radio_handbook.Forms
                 }
             }
         }
-        private void searchButton_Click(object sender, EventArgs e)
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var result = handbook.Search(idTextBox.Text.Trim(), nameTextBox.Text.Trim(), typeСomboBox.Text.Trim(),
-                                            resistanceTextBox.Text.Trim(), capacitanceTextBox.Text.Trim(),
-                                            inductanceTextBox.Text.Trim(), descriptionTextBox.Text.Trim());
-            dataGridView1.DataSource = result;
+            searchButton_Click(null, null);
         }
-
+        private void customizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addButton_Click(null, null);
+        }
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeButton_Click(null, null);
+        }
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            deleteButton_Click(null, null);
+        }
         private void aboutToolStripMenuItem_Click(Object sender, EventArgs e)
         {
-
-        }
-        private void changeButton_Click(Object sender, EventArgs e)
-        {
-            var componentEditForm = new ComponentEditForm(SelectedComponent);
-            if (componentEditForm.ShowDialog() == DialogResult.OK)
-            {
-                searchButton_Click(null, null);
-            }
-        }
-        private void addButton_Click(Object sender, EventArgs e)
-        {
-            var addComponentForm = new AddComponentForm(handbook.RadioComponents);
-            if (addComponentForm.ShowDialog() == DialogResult.OK)
-            {
-                searchButton_Click(null, null);
-            }
+            MessageBox.Show("Автор програми - Козир Дмитро Миколайович.\nПрограма призначення для зберігання інформації та порівняння компонентів радіоелектроніки.", "Про нас", MessageBoxButtons.OK);
         }
     }
 }
