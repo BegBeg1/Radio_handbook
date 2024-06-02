@@ -438,6 +438,7 @@
             addButton.TabIndex = 17;
             addButton.Text = "Додати";
             addButton.UseVisualStyleBackColor = true;
+            addButton.Click += this.addButton_Click;
             // 
             // changeButton
             // 
@@ -459,7 +460,7 @@
             deleteButton.TabIndex = 19;
             deleteButton.Text = "Видалити";
             deleteButton.UseVisualStyleBackColor = true;
-            deleteButton.Click += this.deleteButton_Click;
+            deleteButton.Click += deleteButton_Click;
             // 
             // dataGridView1
             // 

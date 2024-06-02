@@ -17,7 +17,6 @@ namespace Radio_handbook.Models
 
         public List<RadioComponent> FillWithTestData(int n)
         {
-            //RadioComponents.Clear();
             var Components = new List<RadioComponent>();
             for (int i = 1; i <= n; i++)
             {

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 
 namespace Radio_handbook.Forms
 {
@@ -76,6 +77,13 @@ namespace Radio_handbook.Forms
                 searchButton_Click(null, null);
             }
         }
-
+        private void addButton_Click(Object sender, EventArgs e)
+        {
+            var addComponentForm = new AddComponentForm(handbook.RadioComponents);
+            if (addComponentForm.ShowDialog() == DialogResult.OK)
+            {
+                searchButton_Click(null, null);
+            }
+        }
     }
 }
