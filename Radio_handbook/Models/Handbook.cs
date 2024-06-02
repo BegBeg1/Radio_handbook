@@ -12,7 +12,7 @@ namespace Radio_handbook.Models
         public List<RadioComponent> RadioComponents { get; set; }
         public Handbook() 
         {
-            RadioComponents = FillWithTestData(10);
+            RadioComponents = FillWithTestData(1);
         }
 
         public List<RadioComponent> FillWithTestData(int n)

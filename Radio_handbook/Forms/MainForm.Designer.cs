@@ -60,6 +60,7 @@
             toolStripSeparator5 = new ToolStripSeparator();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
+            typeСomboBox = new ComboBox();
             descriptionTextBox = new TextBox();
             descriptionLabel = new Label();
             inductanceTextBox = new TextBox();
@@ -287,6 +288,7 @@
             // 
             panel1.Anchor = AnchorStyles.Top;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(typeСomboBox);
             panel1.Controls.Add(descriptionTextBox);
             panel1.Controls.Add(descriptionLabel);
             panel1.Controls.Add(inductanceTextBox);
@@ -306,6 +308,15 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(533, 258);
             panel1.TabIndex = 1;
+            // 
+            // typeСomboBox
+            // 
+            typeСomboBox.FormattingEnabled = true;
+            typeСomboBox.Items.AddRange(new object[] { "Всі типи", "Резистор", "Конденсатор", "Котушка індуктивності" });
+            typeСomboBox.Location = new Point(360, 222);
+            typeСomboBox.Name = "typeСomboBox";
+            typeСomboBox.Size = new Size(77, 23);
+            typeСomboBox.TabIndex = 21;
             // 
             // descriptionTextBox
             // 
@@ -438,7 +449,7 @@
             addButton.TabIndex = 17;
             addButton.Text = "Додати";
             addButton.UseVisualStyleBackColor = true;
-            addButton.Click += this.addButton_Click;
+            addButton.Click += addButton_Click;
             // 
             // changeButton
             // 
@@ -551,5 +562,6 @@
         private Button changeButton;
         private Button deleteButton;
         private DataGridView dataGridView1;
+        private ComboBox typeСomboBox;
     }
 }

@@ -30,7 +30,6 @@ namespace Radio_handbook.Forms
                 Close();
             }
         }
-
         public RadioComponent? SelectedComponent
         {
             get
@@ -45,7 +44,7 @@ namespace Radio_handbook.Forms
         }
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Ви впевнені, що хочете видалити елемент?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show($"Ви впевнені, що хочете видалити елемент {SelectedComponent.Name}?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 handbook.RadioComponents.RemoveAt(handbook.RadioComponents.IndexOf(SelectedComponent));
@@ -59,9 +58,9 @@ namespace Radio_handbook.Forms
         }
         private void searchButton_Click(object sender, EventArgs e)
         {
-            var result = handbook.Search(idTextBox.Text, nameTextBox.Text, typeTextBox.Text,
-                                            resistanceTextBox.Text, capacitanceTextBox.Text,
-                                            inductanceTextBox.Text, descriptionTextBox.Text);
+            var result = handbook.Search(idTextBox.Text.Trim(), nameTextBox.Text.Trim(), typeTextBox.Text.Trim(),
+                                            resistanceTextBox.Text.Trim(), capacitanceTextBox.Text.Trim(),
+                                            inductanceTextBox.Text.Trim(), descriptionTextBox.Text.Trim());
             dataGridView1.DataSource = result;
         }
 

@@ -19,7 +19,15 @@ namespace Radio_handbook.Forms
             InitializeComponent();
 
             this.handbook = handbook;
-            idTextBox.Text = Convert.ToString(handbook[handbook.Count].Id + 1);
+            if (handbook.Count != 0)
+            {
+                idTextBox.Text = Convert.ToString(handbook[handbook.Count - 1].Id + 1);
+            } 
+            else
+            {
+                idTextBox.Text = "1";
+            }
+            
         }
 
         private void idTextBox_TextChanged(object sender, EventArgs e)
@@ -32,12 +40,15 @@ namespace Radio_handbook.Forms
             handbook.Add(new RadioComponent
             {
                 Id = Convert.ToInt32(idTextBox.Text),
-                Name = nameTextBox.Text,
-                Type = typeTextBox.Text,
-                Resistance = Convert.ToDouble(resistanceTextBox.Text),
-                Capacitance = Convert.ToDouble(capacitanceTextBox.Text),
-                Inductance = Convert.ToDouble(inductanceTextBox.Text),
-                Description = descriptionTextBox.Text
+                Name = nameTextBox.Text.Trim(),
+                Type = typeTextBox.Text.Trim(),
+                //Resistance = Convert.ToDouble(resistanceTextBox.Text),
+                //Capacitance = Convert.ToDouble(capacitanceTextBox.Text),
+                //Inductance = Convert.ToDouble(inductanceTextBox.Text),
+                Resistance = null,
+                Capacitance = null,
+                Inductance = null,
+                Description = descriptionTextBox.Text.Trim()
             });
             Close();
         }
