@@ -40,16 +40,15 @@
             helpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
+            resistanceTextBox = new NumericUpDown();
+            capacitanceTextBox = new NumericUpDown();
             idTextBox = new NumericUpDown();
             typeСomboBox = new ComboBox();
             descriptionTextBox = new TextBox();
             descriptionLabel = new Label();
-            inductanceTextBox = new TextBox();
             inductanceLabel = new Label();
-            capacitanceTextBox = new TextBox();
             capacitanceLabel = new Label();
             searchButton = new Button();
-            resistanceTextBox = new TextBox();
             resistanceLabel = new Label();
             typeLabel = new Label();
             nameTextBox = new TextBox();
@@ -67,11 +66,15 @@
             inductanceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             descriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             radioComponentBindingSource = new BindingSource(components);
+            inductanceTextBox = new NumericUpDown();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)resistanceTextBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)capacitanceTextBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)idTextBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)inductanceTextBox).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -150,16 +153,16 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(inductanceTextBox);
+            panel1.Controls.Add(resistanceTextBox);
+            panel1.Controls.Add(capacitanceTextBox);
             panel1.Controls.Add(idTextBox);
             panel1.Controls.Add(typeСomboBox);
             panel1.Controls.Add(descriptionTextBox);
             panel1.Controls.Add(descriptionLabel);
-            panel1.Controls.Add(inductanceTextBox);
             panel1.Controls.Add(inductanceLabel);
-            panel1.Controls.Add(capacitanceTextBox);
             panel1.Controls.Add(capacitanceLabel);
             panel1.Controls.Add(searchButton);
-            panel1.Controls.Add(resistanceTextBox);
             panel1.Controls.Add(resistanceLabel);
             panel1.Controls.Add(typeLabel);
             panel1.Controls.Add(nameTextBox);
@@ -169,6 +172,20 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(533, 258);
             panel1.TabIndex = 1;
+            // 
+            // resistanceTextBox
+            // 
+            resistanceTextBox.Location = new Point(92, 101);
+            resistanceTextBox.Name = "resistanceTextBox";
+            resistanceTextBox.Size = new Size(427, 23);
+            resistanceTextBox.TabIndex = 23;
+            // 
+            // capacitanceTextBox1
+            // 
+            capacitanceTextBox.Location = new Point(92, 130);
+            capacitanceTextBox.Name = "capacitanceTextBox1";
+            capacitanceTextBox.Size = new Size(427, 23);
+            capacitanceTextBox.TabIndex = 21;
             // 
             // idTextBox
             // 
@@ -205,13 +222,6 @@
             descriptionLabel.TabIndex = 12;
             descriptionLabel.Text = "Опис";
             // 
-            // inductanceTextBox
-            // 
-            inductanceTextBox.Location = new Point(92, 159);
-            inductanceTextBox.Name = "inductanceTextBox";
-            inductanceTextBox.Size = new Size(427, 23);
-            inductanceTextBox.TabIndex = 11;
-            // 
             // inductanceLabel
             // 
             inductanceLabel.AutoSize = true;
@@ -220,13 +230,6 @@
             inductanceLabel.Size = new Size(80, 15);
             inductanceLabel.TabIndex = 10;
             inductanceLabel.Text = "Індуктивність";
-            // 
-            // capacitanceTextBox
-            // 
-            capacitanceTextBox.Location = new Point(92, 130);
-            capacitanceTextBox.Name = "capacitanceTextBox";
-            capacitanceTextBox.Size = new Size(427, 23);
-            capacitanceTextBox.TabIndex = 9;
             // 
             // capacitanceLabel
             // 
@@ -246,13 +249,6 @@
             searchButton.Text = "Пошук";
             searchButton.UseVisualStyleBackColor = true;
             searchButton.Click += searchButton_Click;
-            // 
-            // resistanceTextBox
-            // 
-            resistanceTextBox.Location = new Point(92, 101);
-            resistanceTextBox.Name = "resistanceTextBox";
-            resistanceTextBox.Size = new Size(427, 23);
-            resistanceTextBox.TabIndex = 7;
             // 
             // resistanceLabel
             // 
@@ -401,6 +397,13 @@
             // 
             radioComponentBindingSource.DataSource = typeof(Models.RadioComponent);
             // 
+            // inductanceTextBox1
+            // 
+            inductanceTextBox.Location = new Point(92, 159);
+            inductanceTextBox.Name = "inductanceTextBox1";
+            inductanceTextBox.Size = new Size(427, 23);
+            inductanceTextBox.TabIndex = 22;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -420,9 +423,12 @@
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)resistanceTextBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)capacitanceTextBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)idTextBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)inductanceTextBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -438,19 +444,15 @@
         private ToolStripMenuItem helpToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
         private Panel panel1;
-        private TextBox resistanceTextBox;
         private Label resistanceLabel;
-        private TextBox typeTextBox2;
         private Label typeLabel;
         private TextBox nameTextBox;
         private Label nameLabel;
         private Label idLabel;
         private Button searchButton;
-        private TextBox capacitanceTextBox;
         private Label capacitanceLabel;
         private TextBox descriptionTextBox;
         private Label descriptionLabel;
-        private TextBox inductanceTextBox;
         private Label inductanceLabel;
         private Button addButton;
         private Button changeButton;
@@ -468,5 +470,8 @@
         private ToolStripMenuItem видалитиToolStripMenuItem;
         private ToolStripMenuItem searchToolStripMenuItem;
         private NumericUpDown idTextBox;
+        private NumericUpDown resistanceTextBox;
+        private NumericUpDown capacitanceTextBox;
+        private NumericUpDown inductanceTextBox;
     }
 }

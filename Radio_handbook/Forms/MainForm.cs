@@ -22,6 +22,9 @@ namespace Radio_handbook.Forms
             InitializeComponent();
             typeСomboBox.SelectedIndex = 0;
             idTextBox.Text = "";
+            resistanceTextBox.Text = "";
+            capacitanceTextBox.Text = "";
+            inductanceTextBox.Text = "";
             searchButton_Click(null, null);
         }
         private void typeСomboBox_SelectedIndexChanged(object sender, EventArgs e)
