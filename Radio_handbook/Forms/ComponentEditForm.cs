@@ -20,17 +20,17 @@ namespace Radio_handbook.Forms
             InitializeComponent();
 
             nameTextBox.TextChanged += new EventHandler(TextChanged);
-            resistanceTextBox.TextChanged += new EventHandler(TextChanged);
-            capacitanceTextBox.TextChanged += new EventHandler(TextChanged);
-            inductanceTextBox.TextChanged += new EventHandler(TextChanged);
+            resistanceNumericUpDown.TextChanged += new EventHandler(TextChanged);
+            capacitanceNumericUpDown.TextChanged += new EventHandler(TextChanged);
+            inductanceNumericUpDown.TextChanged += new EventHandler(TextChanged);
 
             this.radioComponent = radioComponent;
-            idTextBox.Text = radioComponent.Id.ToString();
+            idNumericUpDown.Text = radioComponent.Id.ToString();
             nameTextBox.Text = radioComponent.Name;
             typeСomboBox.Text = radioComponent.Type;
-            resistanceTextBox.Text = radioComponent.Resistance.ToString();
-            capacitanceTextBox.Text = radioComponent.Capacitance.ToString();
-            inductanceTextBox.Text = radioComponent.Inductance.ToString();
+            resistanceNumericUpDown.Text = radioComponent.Resistance.ToString();
+            capacitanceNumericUpDown.Text = radioComponent.Capacitance.ToString();
+            inductanceNumericUpDown.Text = radioComponent.Inductance.ToString();
             descriptionTextBox.Text = radioComponent.Description;
 
         }
@@ -41,9 +41,9 @@ namespace Radio_handbook.Forms
         private void textChangedCheck()
         {
             if (nameTextBox.Text.Trim() == "" || 
-                ((typeСomboBox.SelectedIndex == 0 && resistanceTextBox.Text.Trim() == "") ||
-                (typeСomboBox.SelectedIndex == 1 && capacitanceTextBox.Text.Trim() == "") ||
-                (typeСomboBox.SelectedIndex == 2 && inductanceTextBox.Text.Trim() == "")))
+                ((typeСomboBox.SelectedIndex == 0 && resistanceNumericUpDown.Text.Trim() == "") ||
+                (typeСomboBox.SelectedIndex == 1 && capacitanceNumericUpDown.Text.Trim() == "") ||
+                (typeСomboBox.SelectedIndex == 2 && inductanceNumericUpDown.Text.Trim() == "")))
             {
                 okButton.Enabled = false;
             }
@@ -57,25 +57,25 @@ namespace Radio_handbook.Forms
             switch (typeСomboBox.SelectedIndex)
             {
                 case 0:
-                    resistanceTextBox.Enabled = true;
-                    capacitanceTextBox.Text = "";
-                    capacitanceTextBox.Enabled = false;
-                    inductanceTextBox.Text = "";
-                    inductanceTextBox.Enabled = false;
+                    resistanceNumericUpDown.Enabled = true;
+                    capacitanceNumericUpDown.Text = "";
+                    capacitanceNumericUpDown.Enabled = false;
+                    inductanceNumericUpDown.Text = "";
+                    inductanceNumericUpDown.Enabled = false;
                     break;
                 case 1:
-                    resistanceTextBox.Text = "";
-                    resistanceTextBox.Enabled = false;
-                    capacitanceTextBox.Enabled = true;
-                    inductanceTextBox.Text = "";
-                    inductanceTextBox.Enabled = false;
+                    resistanceNumericUpDown.Text = "";
+                    resistanceNumericUpDown.Enabled = false;
+                    capacitanceNumericUpDown.Enabled = true;
+                    inductanceNumericUpDown.Text = "";
+                    inductanceNumericUpDown.Enabled = false;
                     break;
                 case 2:
-                    resistanceTextBox.Text = "";
-                    resistanceTextBox.Enabled = false;
-                    capacitanceTextBox.Text = "";
-                    capacitanceTextBox.Enabled = false;
-                    inductanceTextBox.Enabled = true;
+                    resistanceNumericUpDown.Text = "";
+                    resistanceNumericUpDown.Enabled = false;
+                    capacitanceNumericUpDown.Text = "";
+                    capacitanceNumericUpDown.Enabled = false;
+                    inductanceNumericUpDown.Enabled = true;
                     break;
             }
         }
@@ -85,26 +85,26 @@ namespace Radio_handbook.Forms
             DialogResult result = MessageBox.Show("Ви впевнені, що хочете зберегти зміни?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                radioComponent.Id = Convert.ToInt32(idTextBox.Text);
+                radioComponent.Id = Convert.ToInt32(idNumericUpDown.Text);
                 radioComponent.Name = nameTextBox.Text;
                 radioComponent.Type = typeСomboBox.Text;
                 if (typeСomboBox.SelectedIndex == 0)
                 {
-                    radioComponent.Resistance = Convert.ToDouble(resistanceTextBox.Text);
+                    radioComponent.Resistance = Convert.ToDouble(resistanceNumericUpDown.Text);
                     radioComponent.Capacitance = null;
                     radioComponent.Inductance = null;
                 }
                 else if (typeСomboBox.SelectedIndex == 1)
                 {
                     radioComponent.Resistance = null;
-                    radioComponent.Capacitance = Convert.ToDouble(capacitanceTextBox.Text);
+                    radioComponent.Capacitance = Convert.ToDouble(capacitanceNumericUpDown.Text);
                     radioComponent.Inductance = null;
                 }
                 else 
                 {
                     radioComponent.Resistance = null;
                     radioComponent.Capacitance = null;
-                    radioComponent.Inductance = Convert.ToDouble(inductanceTextBox.Text);
+                    radioComponent.Inductance = Convert.ToDouble(inductanceNumericUpDown.Text);
                 }
                 radioComponent.Description = descriptionTextBox.Text;
                 Close();

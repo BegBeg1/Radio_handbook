@@ -18,32 +18,32 @@ namespace Radio_handbook.Forms
         {
             InitializeComponent();
 
-            resistanceTextBox.Text = "";
-            capacitanceTextBox.Text = "";
-            inductanceTextBox.Text = "";
+            resistanceNumericUpDown.Text = "";
+            capacitanceNumericUpDown.Text = "";
+            inductanceNumericUpDown.Text = "";
 
             this.handbook = handbook;
             if (handbook.Count != 0)
             {
-                idTextBox.Text = Convert.ToString(handbook[handbook.Count - 1].Id + 1);
+                idNumericUpDown.Text = Convert.ToString(handbook[handbook.Count - 1].Id + 1);
             } 
             else
             {
-                idTextBox.Text = "1";
+                idNumericUpDown.Text = "1";
             }
             typeСomboBox.SelectedIndex = 0;
             nameTextBox.TextChanged += new EventHandler(TextChanged);
-            resistanceTextBox.TextChanged += new EventHandler(TextChanged);
-            capacitanceTextBox.TextChanged += new EventHandler(TextChanged);
-            inductanceTextBox.TextChanged += new EventHandler(TextChanged);
+            resistanceNumericUpDown.TextChanged += new EventHandler(TextChanged);
+            capacitanceNumericUpDown.TextChanged += new EventHandler(TextChanged);
+            inductanceNumericUpDown.TextChanged += new EventHandler(TextChanged);
             TextChangedCheck();
         }
         void TextChangedCheck()
         {
             if (nameTextBox.Text.Trim() == "" ||
-                ((typeСomboBox.SelectedIndex == 0 && resistanceTextBox.Text.Trim() == "") ||
-                (typeСomboBox.SelectedIndex == 1 && capacitanceTextBox.Text.Trim() == "") ||
-                (typeСomboBox.SelectedIndex == 2 && inductanceTextBox.Text.Trim() == "")))
+                ((typeСomboBox.SelectedIndex == 0 && resistanceNumericUpDown.Text.Trim() == "") ||
+                (typeСomboBox.SelectedIndex == 1 && capacitanceNumericUpDown.Text.Trim() == "") ||
+                (typeСomboBox.SelectedIndex == 2 && inductanceNumericUpDown.Text.Trim() == "")))
             {
                 okButton.Enabled = false;
             }
@@ -62,25 +62,25 @@ namespace Radio_handbook.Forms
             switch (typeСomboBox.SelectedIndex)
             {
                 case 0:
-                    resistanceTextBox.Enabled = true;
-                    capacitanceTextBox.Text = "";
-                    capacitanceTextBox.Enabled = false;
-                    inductanceTextBox.Text = "";
-                    inductanceTextBox.Enabled = false;
+                    resistanceNumericUpDown.Enabled = true;
+                    capacitanceNumericUpDown.Text = "";
+                    capacitanceNumericUpDown.Enabled = false;
+                    inductanceNumericUpDown.Text = "";
+                    inductanceNumericUpDown.Enabled = false;
                     break;
                 case 1:
-                    resistanceTextBox.Text = "";
-                    resistanceTextBox.Enabled = false;
-                    capacitanceTextBox.Enabled = true;
-                    inductanceTextBox.Text = "";
-                    inductanceTextBox.Enabled = false;
+                    resistanceNumericUpDown.Text = "";
+                    resistanceNumericUpDown.Enabled = false;
+                    capacitanceNumericUpDown.Enabled = true;
+                    inductanceNumericUpDown.Text = "";
+                    inductanceNumericUpDown.Enabled = false;
                     break;
                 case 2:
-                    resistanceTextBox.Text = "";
-                    resistanceTextBox.Enabled = false;
-                    capacitanceTextBox.Text = "";
-                    capacitanceTextBox.Enabled = false;
-                    inductanceTextBox.Enabled = true;
+                    resistanceNumericUpDown.Text = "";
+                    resistanceNumericUpDown.Enabled = false;
+                    capacitanceNumericUpDown.Text = "";
+                    capacitanceNumericUpDown.Enabled = false;
+                    inductanceNumericUpDown.Enabled = true;
                     break;
             }
         }
@@ -90,7 +90,7 @@ namespace Radio_handbook.Forms
 
             var result = new RadioComponent
             {
-                Id = Convert.ToInt32(idTextBox.Text),
+                Id = Convert.ToInt32(idNumericUpDown.Text),
                 Name = nameTextBox.Text.Trim(),
                 Type = typeСomboBox.Text,
                 Resistance = null,
@@ -100,15 +100,15 @@ namespace Radio_handbook.Forms
             };
             if (typeСomboBox.SelectedIndex == 0) 
             {
-                result.Resistance = Convert.ToDouble(resistanceTextBox.Text);
+                result.Resistance = Convert.ToDouble(resistanceNumericUpDown.Text);
             }
             else if (typeСomboBox.SelectedIndex == 1)
             {
-                result.Capacitance = Convert.ToDouble(capacitanceTextBox.Text);
+                result.Capacitance = Convert.ToDouble(capacitanceNumericUpDown.Text);
             }
             else
             {
-                result.Inductance = Convert.ToDouble(inductanceTextBox.Text);
+                result.Inductance = Convert.ToDouble(inductanceNumericUpDown.Text);
             }
             handbook.Add(result);
             Close();

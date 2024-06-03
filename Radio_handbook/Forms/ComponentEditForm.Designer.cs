@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            capacitanceTextBox = new NumericUpDown();
-            inductanceTextBox = new NumericUpDown();
-            resistanceTextBox = new NumericUpDown();
-            idTextBox = new NumericUpDown();
+            capacitanceNumericUpDown = new NumericUpDown();
+            inductanceNumericUpDown = new NumericUpDown();
+            resistanceNumericUpDown = new NumericUpDown();
+            idNumericUpDown = new NumericUpDown();
             typeСomboBox = new ComboBox();
             cancelButton = new Button();
             okButton = new Button();
@@ -46,20 +46,20 @@
             nameLabel = new Label();
             idLabel = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)capacitanceTextBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)inductanceTextBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)resistanceTextBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)idTextBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)capacitanceNumericUpDown).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)inductanceNumericUpDown).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)resistanceNumericUpDown).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)idNumericUpDown).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(capacitanceTextBox);
-            panel1.Controls.Add(inductanceTextBox);
-            panel1.Controls.Add(resistanceTextBox);
-            panel1.Controls.Add(idTextBox);
+            panel1.Controls.Add(capacitanceNumericUpDown);
+            panel1.Controls.Add(inductanceNumericUpDown);
+            panel1.Controls.Add(resistanceNumericUpDown);
+            panel1.Controls.Add(idNumericUpDown);
             panel1.Controls.Add(typeСomboBox);
             panel1.Controls.Add(cancelButton);
             panel1.Controls.Add(okButton);
@@ -75,37 +75,37 @@
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(540, 245);
-            panel1.TabIndex = 0;
+            panel1.TabIndex = 1;
             // 
-            // capacitanceTextBox
+            // capacitanceNumericUpDown
             // 
-            capacitanceTextBox.Location = new Point(94, 119);
-            capacitanceTextBox.Name = "capacitanceTextBox";
-            capacitanceTextBox.Size = new Size(427, 23);
-            capacitanceTextBox.TabIndex = 34;
+            capacitanceNumericUpDown.Location = new Point(94, 119);
+            capacitanceNumericUpDown.Name = "capacitanceNumericUpDown";
+            capacitanceNumericUpDown.Size = new Size(427, 23);
+            capacitanceNumericUpDown.TabIndex = 11;
             // 
-            // inductanceTextBox
+            // inductanceNumericUpDown
             // 
-            inductanceTextBox.Location = new Point(94, 149);
-            inductanceTextBox.Name = "inductanceTextBox";
-            inductanceTextBox.Size = new Size(427, 23);
-            inductanceTextBox.TabIndex = 33;
+            inductanceNumericUpDown.Location = new Point(94, 149);
+            inductanceNumericUpDown.Name = "inductanceNumericUpDown";
+            inductanceNumericUpDown.Size = new Size(427, 23);
+            inductanceNumericUpDown.TabIndex = 13;
             // 
-            // resistanceTextBox
+            // resistanceNumericUpDown
             // 
-            resistanceTextBox.Location = new Point(94, 91);
-            resistanceTextBox.Name = "resistanceTextBox";
-            resistanceTextBox.Size = new Size(427, 23);
-            resistanceTextBox.TabIndex = 32;
+            resistanceNumericUpDown.Location = new Point(94, 91);
+            resistanceNumericUpDown.Name = "resistanceNumericUpDown";
+            resistanceNumericUpDown.Size = new Size(427, 23);
+            resistanceNumericUpDown.TabIndex = 9;
             // 
-            // idTextBox
+            // idNumericUpDown
             // 
-            idTextBox.Enabled = false;
-            idTextBox.Location = new Point(94, 4);
-            idTextBox.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
-            idTextBox.Name = "idTextBox";
-            idTextBox.Size = new Size(427, 23);
-            idTextBox.TabIndex = 31;
+            idNumericUpDown.Enabled = false;
+            idNumericUpDown.Location = new Point(94, 4);
+            idNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            idNumericUpDown.Name = "idNumericUpDown";
+            idNumericUpDown.Size = new Size(427, 23);
+            idNumericUpDown.TabIndex = 3;
             // 
             // typeСomboBox
             // 
@@ -115,7 +115,7 @@
             typeСomboBox.Location = new Point(94, 61);
             typeСomboBox.Name = "typeСomboBox";
             typeСomboBox.Size = new Size(427, 23);
-            typeСomboBox.TabIndex = 30;
+            typeСomboBox.TabIndex = 7;
             typeСomboBox.SelectedIndexChanged += typeСomboBox_SelectedIndexChanged;
             // 
             // cancelButton
@@ -123,7 +123,7 @@
             cancelButton.Location = new Point(334, 211);
             cancelButton.Name = "cancelButton";
             cancelButton.Size = new Size(114, 29);
-            cancelButton.TabIndex = 29;
+            cancelButton.TabIndex = 17;
             cancelButton.Text = "Cancel";
             cancelButton.UseVisualStyleBackColor = true;
             cancelButton.Click += cancelButton_Click;
@@ -134,7 +134,7 @@
             okButton.Location = new Point(106, 211);
             okButton.Name = "okButton";
             okButton.Size = new Size(114, 29);
-            okButton.TabIndex = 28;
+            okButton.TabIndex = 16;
             okButton.Text = "Ok";
             okButton.UseVisualStyleBackColor = true;
             okButton.Click += okButton_Click;
@@ -144,7 +144,7 @@
             descriptionTextBox.Location = new Point(94, 177);
             descriptionTextBox.Name = "descriptionTextBox";
             descriptionTextBox.Size = new Size(427, 23);
-            descriptionTextBox.TabIndex = 27;
+            descriptionTextBox.TabIndex = 15;
             // 
             // descriptionLabel
             // 
@@ -152,7 +152,7 @@
             descriptionLabel.Location = new Point(10, 180);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new Size(36, 15);
-            descriptionLabel.TabIndex = 26;
+            descriptionLabel.TabIndex = 14;
             descriptionLabel.Text = "Опис";
             // 
             // inductanceLabel
@@ -161,7 +161,7 @@
             inductanceLabel.Location = new Point(10, 151);
             inductanceLabel.Name = "inductanceLabel";
             inductanceLabel.Size = new Size(80, 15);
-            inductanceLabel.TabIndex = 24;
+            inductanceLabel.TabIndex = 12;
             inductanceLabel.Text = "Індуктивність";
             // 
             // capacitanceLabel
@@ -170,7 +170,7 @@
             capacitanceLabel.Location = new Point(10, 122);
             capacitanceLabel.Name = "capacitanceLabel";
             capacitanceLabel.Size = new Size(50, 15);
-            capacitanceLabel.TabIndex = 22;
+            capacitanceLabel.TabIndex = 10;
             capacitanceLabel.Text = "Ємність";
             // 
             // resistanceLabel
@@ -179,7 +179,7 @@
             resistanceLabel.Location = new Point(10, 93);
             resistanceLabel.Name = "resistanceLabel";
             resistanceLabel.Size = new Size(33, 15);
-            resistanceLabel.TabIndex = 20;
+            resistanceLabel.TabIndex = 8;
             resistanceLabel.Text = "Опір";
             // 
             // typeLabel
@@ -188,7 +188,7 @@
             typeLabel.Location = new Point(10, 64);
             typeLabel.Name = "typeLabel";
             typeLabel.Size = new Size(27, 15);
-            typeLabel.TabIndex = 18;
+            typeLabel.TabIndex = 6;
             typeLabel.Text = "Тип";
             // 
             // nameTextBox
@@ -196,7 +196,7 @@
             nameTextBox.Location = new Point(94, 32);
             nameTextBox.Name = "nameTextBox";
             nameTextBox.Size = new Size(427, 23);
-            nameTextBox.TabIndex = 17;
+            nameTextBox.TabIndex = 5;
             // 
             // nameLabel
             // 
@@ -204,7 +204,7 @@
             nameLabel.Location = new Point(10, 35);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new Size(39, 15);
-            nameLabel.TabIndex = 16;
+            nameLabel.TabIndex = 4;
             nameLabel.Text = "Назва";
             // 
             // idLabel
@@ -213,7 +213,7 @@
             idLabel.Location = new Point(10, 6);
             idLabel.Name = "idLabel";
             idLabel.Size = new Size(17, 15);
-            idLabel.TabIndex = 14;
+            idLabel.TabIndex = 2;
             idLabel.Text = "Id";
             // 
             // ComponentEditForm
@@ -227,10 +227,10 @@
             Text = "ComponentEditForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)capacitanceTextBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)inductanceTextBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)resistanceTextBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)idTextBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)capacitanceNumericUpDown).EndInit();
+            ((System.ComponentModel.ISupportInitialize)inductanceNumericUpDown).EndInit();
+            ((System.ComponentModel.ISupportInitialize)resistanceNumericUpDown).EndInit();
+            ((System.ComponentModel.ISupportInitialize)idNumericUpDown).EndInit();
             ResumeLayout(false);
         }
 
@@ -249,9 +249,9 @@
         private Label nameLabel;
         private Label idLabel;
         private ComboBox typeСomboBox;
-        private NumericUpDown idTextBox;
-        private NumericUpDown capacitanceTextBox;
-        private NumericUpDown inductanceTextBox;
-        private NumericUpDown resistanceTextBox;
+        private NumericUpDown idNumericUpDown;
+        private NumericUpDown capacitanceNumericUpDown;
+        private NumericUpDown inductanceNumericUpDown;
+        private NumericUpDown resistanceNumericUpDown;
     }
 }

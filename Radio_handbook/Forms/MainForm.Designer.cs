@@ -40,10 +40,10 @@
             helpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
-            inductanceTextBox = new NumericUpDown();
-            resistanceTextBox = new NumericUpDown();
-            capacitanceTextBox = new NumericUpDown();
-            idTextBox = new NumericUpDown();
+            inductanceNumericUpDown = new NumericUpDown();
+            resistanceNumericUpDown = new NumericUpDown();
+            capacitanceNumericUpDown = new NumericUpDown();
+            idNumericUpDown = new NumericUpDown();
             typeСomboBox = new ComboBox();
             descriptionTextBox = new TextBox();
             descriptionLabel = new Label();
@@ -69,10 +69,10 @@
             radioComponentBindingSource = new BindingSource(components);
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)inductanceTextBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)resistanceTextBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)capacitanceTextBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)idTextBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)inductanceNumericUpDown).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)resistanceNumericUpDown).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)capacitanceNumericUpDown).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)idNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).BeginInit();
             SuspendLayout();
@@ -96,7 +96,7 @@
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(103, 22);
             exitToolStripMenuItem.Text = "Вихід";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -110,28 +110,28 @@
             // searchToolStripMenuItem
             // 
             searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            searchToolStripMenuItem.Size = new Size(180, 22);
+            searchToolStripMenuItem.Size = new Size(126, 22);
             searchToolStripMenuItem.Text = "Пошук";
             searchToolStripMenuItem.Click += searchToolStripMenuItem_Click;
             // 
             // addToolStripMenuItem
             // 
             addToolStripMenuItem.Name = "addToolStripMenuItem";
-            addToolStripMenuItem.Size = new Size(180, 22);
+            addToolStripMenuItem.Size = new Size(126, 22);
             addToolStripMenuItem.Text = "Додати";
             addToolStripMenuItem.Click += customizeToolStripMenuItem_Click;
             // 
             // optionsToolStripMenuItem
             // 
             optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            optionsToolStripMenuItem.Size = new Size(180, 22);
+            optionsToolStripMenuItem.Size = new Size(126, 22);
             optionsToolStripMenuItem.Text = "Змінити";
             optionsToolStripMenuItem.Click += optionsToolStripMenuItem_Click;
             // 
             // видалитиToolStripMenuItem
             // 
             видалитиToolStripMenuItem.Name = "видалитиToolStripMenuItem";
-            видалитиToolStripMenuItem.Size = new Size(180, 22);
+            видалитиToolStripMenuItem.Size = new Size(126, 22);
             видалитиToolStripMenuItem.Text = "Видалити";
             видалитиToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
             // 
@@ -145,7 +145,7 @@
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(180, 22);
+            aboutToolStripMenuItem.Size = new Size(154, 22);
             aboutToolStripMenuItem.Text = "Про програму";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
@@ -153,10 +153,10 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(inductanceTextBox);
-            panel1.Controls.Add(resistanceTextBox);
-            panel1.Controls.Add(capacitanceTextBox);
-            panel1.Controls.Add(idTextBox);
+            panel1.Controls.Add(inductanceNumericUpDown);
+            panel1.Controls.Add(resistanceNumericUpDown);
+            panel1.Controls.Add(capacitanceNumericUpDown);
+            panel1.Controls.Add(idNumericUpDown);
             panel1.Controls.Add(typeСomboBox);
             panel1.Controls.Add(descriptionTextBox);
             panel1.Controls.Add(descriptionLabel);
@@ -173,34 +173,34 @@
             panel1.Size = new Size(533, 258);
             panel1.TabIndex = 1;
             // 
-            // inductanceTextBox
+            // inductanceNumericUpDown
             // 
-            inductanceTextBox.Location = new Point(92, 159);
-            inductanceTextBox.Name = "inductanceTextBox";
-            inductanceTextBox.Size = new Size(427, 23);
-            inductanceTextBox.TabIndex = 22;
+            inductanceNumericUpDown.Location = new Point(92, 159);
+            inductanceNumericUpDown.Name = "inductanceNumericUpDown";
+            inductanceNumericUpDown.Size = new Size(427, 23);
+            inductanceNumericUpDown.TabIndex = 12;
             // 
-            // resistanceTextBox
+            // resistanceNumericUpDown
             // 
-            resistanceTextBox.Location = new Point(92, 101);
-            resistanceTextBox.Name = "resistanceTextBox";
-            resistanceTextBox.Size = new Size(427, 23);
-            resistanceTextBox.TabIndex = 23;
+            resistanceNumericUpDown.Location = new Point(92, 101);
+            resistanceNumericUpDown.Name = "resistanceNumericUpDown";
+            resistanceNumericUpDown.Size = new Size(427, 23);
+            resistanceNumericUpDown.TabIndex = 8;
             // 
-            // capacitanceTextBox
+            // capacitanceNumericUpDown
             // 
-            capacitanceTextBox.Location = new Point(92, 130);
-            capacitanceTextBox.Name = "capacitanceTextBox";
-            capacitanceTextBox.Size = new Size(427, 23);
-            capacitanceTextBox.TabIndex = 21;
+            capacitanceNumericUpDown.Location = new Point(92, 130);
+            capacitanceNumericUpDown.Name = "capacitanceNumericUpDown";
+            capacitanceNumericUpDown.Size = new Size(427, 23);
+            capacitanceNumericUpDown.TabIndex = 10;
             // 
-            // idTextBox
+            // idNumericUpDown
             // 
-            idTextBox.Location = new Point(92, 14);
-            idTextBox.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
-            idTextBox.Name = "idTextBox";
-            idTextBox.Size = new Size(427, 23);
-            idTextBox.TabIndex = 22;
+            idNumericUpDown.Location = new Point(92, 14);
+            idNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            idNumericUpDown.Name = "idNumericUpDown";
+            idNumericUpDown.Size = new Size(427, 23);
+            idNumericUpDown.TabIndex = 3;
             // 
             // typeСomboBox
             // 
@@ -210,7 +210,7 @@
             typeСomboBox.Location = new Point(92, 72);
             typeСomboBox.Name = "typeСomboBox";
             typeСomboBox.Size = new Size(427, 23);
-            typeСomboBox.TabIndex = 21;
+            typeСomboBox.TabIndex = 6;
             typeСomboBox.SelectedIndexChanged += typeСomboBox_SelectedIndexChanged;
             // 
             // descriptionTextBox
@@ -218,7 +218,7 @@
             descriptionTextBox.Location = new Point(92, 188);
             descriptionTextBox.Name = "descriptionTextBox";
             descriptionTextBox.Size = new Size(427, 23);
-            descriptionTextBox.TabIndex = 13;
+            descriptionTextBox.TabIndex = 14;
             // 
             // descriptionLabel
             // 
@@ -226,7 +226,7 @@
             descriptionLabel.Location = new Point(8, 191);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new Size(36, 15);
-            descriptionLabel.TabIndex = 12;
+            descriptionLabel.TabIndex = 13;
             descriptionLabel.Text = "Опис";
             // 
             // inductanceLabel
@@ -235,7 +235,7 @@
             inductanceLabel.Location = new Point(8, 162);
             inductanceLabel.Name = "inductanceLabel";
             inductanceLabel.Size = new Size(80, 15);
-            inductanceLabel.TabIndex = 10;
+            inductanceLabel.TabIndex = 11;
             inductanceLabel.Text = "Індуктивність";
             // 
             // capacitanceLabel
@@ -244,7 +244,7 @@
             capacitanceLabel.Location = new Point(8, 133);
             capacitanceLabel.Name = "capacitanceLabel";
             capacitanceLabel.Size = new Size(50, 15);
-            capacitanceLabel.TabIndex = 8;
+            capacitanceLabel.TabIndex = 9;
             capacitanceLabel.Text = "Ємність";
             // 
             // searchButton
@@ -252,7 +252,7 @@
             searchButton.Location = new Point(201, 217);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(134, 30);
-            searchButton.TabIndex = 14;
+            searchButton.TabIndex = 15;
             searchButton.Text = "Пошук";
             searchButton.UseVisualStyleBackColor = true;
             searchButton.Click += searchButton_Click;
@@ -263,7 +263,7 @@
             resistanceLabel.Location = new Point(8, 104);
             resistanceLabel.Name = "resistanceLabel";
             resistanceLabel.Size = new Size(33, 15);
-            resistanceLabel.TabIndex = 6;
+            resistanceLabel.TabIndex = 7;
             resistanceLabel.Text = "Опір";
             // 
             // typeLabel
@@ -272,7 +272,7 @@
             typeLabel.Location = new Point(8, 75);
             typeLabel.Name = "typeLabel";
             typeLabel.Size = new Size(27, 15);
-            typeLabel.TabIndex = 4;
+            typeLabel.TabIndex = 5;
             typeLabel.Text = "Тип";
             // 
             // nameTextBox
@@ -280,7 +280,7 @@
             nameTextBox.Location = new Point(92, 43);
             nameTextBox.Name = "nameTextBox";
             nameTextBox.Size = new Size(427, 23);
-            nameTextBox.TabIndex = 3;
+            nameTextBox.TabIndex = 4;
             // 
             // nameLabel
             // 
@@ -288,7 +288,7 @@
             nameLabel.Location = new Point(8, 46);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new Size(39, 15);
-            nameLabel.TabIndex = 2;
+            nameLabel.TabIndex = 3;
             nameLabel.Text = "Назва";
             // 
             // idLabel
@@ -297,7 +297,7 @@
             idLabel.Location = new Point(8, 17);
             idLabel.Name = "idLabel";
             idLabel.Size = new Size(17, 15);
-            idLabel.TabIndex = 0;
+            idLabel.TabIndex = 2;
             idLabel.Text = "Id";
             // 
             // addButton
@@ -423,10 +423,10 @@
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)inductanceTextBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)resistanceTextBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)capacitanceTextBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)idTextBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)inductanceNumericUpDown).EndInit();
+            ((System.ComponentModel.ISupportInitialize)resistanceNumericUpDown).EndInit();
+            ((System.ComponentModel.ISupportInitialize)capacitanceNumericUpDown).EndInit();
+            ((System.ComponentModel.ISupportInitialize)idNumericUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).EndInit();
             ResumeLayout(false);
@@ -469,9 +469,9 @@
         private BindingSource radioComponentBindingSource;
         private ToolStripMenuItem видалитиToolStripMenuItem;
         private ToolStripMenuItem searchToolStripMenuItem;
-        private NumericUpDown idTextBox;
-        private NumericUpDown resistanceTextBox;
-        private NumericUpDown capacitanceTextBox;
-        private NumericUpDown inductanceTextBox;
+        private NumericUpDown idNumericUpDown;
+        private NumericUpDown resistanceNumericUpDown;
+        private NumericUpDown capacitanceNumericUpDown;
+        private NumericUpDown inductanceNumericUpDown;
     }
 }

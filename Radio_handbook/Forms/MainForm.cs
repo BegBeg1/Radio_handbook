@@ -21,10 +21,10 @@ namespace Radio_handbook.Forms
         {
             InitializeComponent();
             typeСomboBox.SelectedIndex = 0;
-            idTextBox.Text = "";
-            resistanceTextBox.Text = "";
-            capacitanceTextBox.Text = "";
-            inductanceTextBox.Text = "";
+            idNumericUpDown.Text = "";
+            resistanceNumericUpDown.Text = "";
+            capacitanceNumericUpDown.Text = "";
+            inductanceNumericUpDown.Text = "";
             searchButton_Click(null, null);
         }
         private void typeСomboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -32,30 +32,30 @@ namespace Radio_handbook.Forms
             switch (typeСomboBox.SelectedIndex)
             {
                 case 0:
-                    resistanceTextBox.Enabled = true;
-                    capacitanceTextBox.Enabled = true;
-                    inductanceTextBox.Enabled = true;
+                    resistanceNumericUpDown.Enabled = true;
+                    capacitanceNumericUpDown.Enabled = true;
+                    inductanceNumericUpDown.Enabled = true;
                     break;
                 case 1:
-                    resistanceTextBox.Enabled = true;
-                    capacitanceTextBox.Text = "";
-                    capacitanceTextBox.Enabled = false;
-                    inductanceTextBox.Text = "";
-                    inductanceTextBox.Enabled = false;
+                    resistanceNumericUpDown.Enabled = true;
+                    capacitanceNumericUpDown.Text = "";
+                    capacitanceNumericUpDown.Enabled = false;
+                    inductanceNumericUpDown.Text = "";
+                    inductanceNumericUpDown.Enabled = false;
                     break;
                 case 2:
-                    resistanceTextBox.Text = "";
-                    resistanceTextBox.Enabled = false;
-                    capacitanceTextBox.Enabled = true;
-                    inductanceTextBox.Text = "";
-                    inductanceTextBox.Enabled = false;
+                    resistanceNumericUpDown.Text = "";
+                    resistanceNumericUpDown.Enabled = false;
+                    capacitanceNumericUpDown.Enabled = true;
+                    inductanceNumericUpDown.Text = "";
+                    inductanceNumericUpDown.Enabled = false;
                     break;
                 case 3:
-                    resistanceTextBox.Text = "";
-                    resistanceTextBox.Enabled = false;
-                    capacitanceTextBox.Text = "";
-                    capacitanceTextBox.Enabled = false;
-                    inductanceTextBox.Enabled = true;
+                    resistanceNumericUpDown.Text = "";
+                    resistanceNumericUpDown.Enabled = false;
+                    capacitanceNumericUpDown.Text = "";
+                    capacitanceNumericUpDown.Enabled = false;
+                    inductanceNumericUpDown.Enabled = true;
                     break;
             }
         }
@@ -81,9 +81,9 @@ namespace Radio_handbook.Forms
         }
         private void searchButton_Click(object sender, EventArgs e)
         {
-            var result = handbook.Search(idTextBox.Text.Trim(), nameTextBox.Text.Trim(), typeСomboBox.Text.Trim(),
-                                            resistanceTextBox.Text.Trim(), capacitanceTextBox.Text.Trim(),
-                                            inductanceTextBox.Text.Trim(), descriptionTextBox.Text.Trim());
+            var result = handbook.Search(idNumericUpDown.Text.Trim(), nameTextBox.Text.Trim(), typeСomboBox.Text.Trim(),
+                                            resistanceNumericUpDown.Text.Trim(), capacitanceNumericUpDown.Text.Trim(),
+                                            inductanceNumericUpDown.Text.Trim(), descriptionTextBox.Text.Trim());
             dataGridView1.DataSource = result;
         }
         private void addButton_Click(Object sender, EventArgs e)
@@ -134,7 +134,7 @@ namespace Radio_handbook.Forms
         }
         private void aboutToolStripMenuItem_Click(Object sender, EventArgs e)
         {
-            MessageBox.Show("Автор програми - Козир Дмитро Миколайович.\nПрограма призначення для зберігання інформації та порівняння компонентів радіоелектроніки.", "Про нас", MessageBoxButtons.OK);
+            MessageBox.Show("Автор програми - Козир Дмитро Миколайович.\nПрограма призначення для зберігання інформації та порівняння компонентів радіоелектроніки.", "Про програму", MessageBoxButtons.OK);
         }
     }
 }
