@@ -40,6 +40,7 @@
             helpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
+            inductanceTextBox = new NumericUpDown();
             resistanceTextBox = new NumericUpDown();
             capacitanceTextBox = new NumericUpDown();
             idTextBox = new NumericUpDown();
@@ -66,15 +67,14 @@
             inductanceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             descriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             radioComponentBindingSource = new BindingSource(components);
-            inductanceTextBox = new NumericUpDown();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)inductanceTextBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)resistanceTextBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)capacitanceTextBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)idTextBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)inductanceTextBox).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -96,7 +96,7 @@
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(103, 22);
+            exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "Вихід";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -104,34 +104,34 @@
             // 
             toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { searchToolStripMenuItem, addToolStripMenuItem, optionsToolStripMenuItem, видалитиToolStripMenuItem });
             toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            toolsToolStripMenuItem.Size = new Size(67, 20);
-            toolsToolStripMenuItem.Text = "Операції";
+            toolsToolStripMenuItem.Size = new Size(33, 20);
+            toolsToolStripMenuItem.Text = "Дії";
             // 
             // searchToolStripMenuItem
             // 
             searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            searchToolStripMenuItem.Size = new Size(126, 22);
+            searchToolStripMenuItem.Size = new Size(180, 22);
             searchToolStripMenuItem.Text = "Пошук";
             searchToolStripMenuItem.Click += searchToolStripMenuItem_Click;
             // 
             // addToolStripMenuItem
             // 
             addToolStripMenuItem.Name = "addToolStripMenuItem";
-            addToolStripMenuItem.Size = new Size(126, 22);
+            addToolStripMenuItem.Size = new Size(180, 22);
             addToolStripMenuItem.Text = "Додати";
             addToolStripMenuItem.Click += customizeToolStripMenuItem_Click;
             // 
             // optionsToolStripMenuItem
             // 
             optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            optionsToolStripMenuItem.Size = new Size(126, 22);
+            optionsToolStripMenuItem.Size = new Size(180, 22);
             optionsToolStripMenuItem.Text = "Змінити";
             optionsToolStripMenuItem.Click += optionsToolStripMenuItem_Click;
             // 
             // видалитиToolStripMenuItem
             // 
             видалитиToolStripMenuItem.Name = "видалитиToolStripMenuItem";
-            видалитиToolStripMenuItem.Size = new Size(126, 22);
+            видалитиToolStripMenuItem.Size = new Size(180, 22);
             видалитиToolStripMenuItem.Text = "Видалити";
             видалитиToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
             // 
@@ -145,8 +145,8 @@
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(119, 22);
-            aboutToolStripMenuItem.Text = "Про нас";
+            aboutToolStripMenuItem.Size = new Size(180, 22);
+            aboutToolStripMenuItem.Text = "Про програму";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // panel1
@@ -173,6 +173,13 @@
             panel1.Size = new Size(533, 258);
             panel1.TabIndex = 1;
             // 
+            // inductanceTextBox
+            // 
+            inductanceTextBox.Location = new Point(92, 159);
+            inductanceTextBox.Name = "inductanceTextBox";
+            inductanceTextBox.Size = new Size(427, 23);
+            inductanceTextBox.TabIndex = 22;
+            // 
             // resistanceTextBox
             // 
             resistanceTextBox.Location = new Point(92, 101);
@@ -180,10 +187,10 @@
             resistanceTextBox.Size = new Size(427, 23);
             resistanceTextBox.TabIndex = 23;
             // 
-            // capacitanceTextBox1
+            // capacitanceTextBox
             // 
             capacitanceTextBox.Location = new Point(92, 130);
-            capacitanceTextBox.Name = "capacitanceTextBox1";
+            capacitanceTextBox.Name = "capacitanceTextBox";
             capacitanceTextBox.Size = new Size(427, 23);
             capacitanceTextBox.TabIndex = 21;
             // 
@@ -397,13 +404,6 @@
             // 
             radioComponentBindingSource.DataSource = typeof(Models.RadioComponent);
             // 
-            // inductanceTextBox1
-            // 
-            inductanceTextBox.Location = new Point(92, 159);
-            inductanceTextBox.Name = "inductanceTextBox1";
-            inductanceTextBox.Size = new Size(427, 23);
-            inductanceTextBox.TabIndex = 22;
-            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -423,12 +423,12 @@
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)inductanceTextBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)resistanceTextBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)capacitanceTextBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)idTextBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).EndInit();
-            ((System.ComponentModel.ISupportInitialize)inductanceTextBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
