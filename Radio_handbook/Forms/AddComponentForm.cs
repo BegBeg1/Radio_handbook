@@ -18,6 +18,10 @@ namespace Radio_handbook.Forms
         {
             InitializeComponent();
 
+            resistanceTextBox.Text = "";
+            capacitanceTextBox.Text = "";
+            inductanceTextBox.Text = "";
+
             this.handbook = handbook;
             if (handbook.Count != 0)
             {
@@ -79,11 +83,6 @@ namespace Radio_handbook.Forms
                     inductanceTextBox.Enabled = true;
                     break;
             }
-        }
-
-        private void idTextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void okButton_Click(object sender, EventArgs e)

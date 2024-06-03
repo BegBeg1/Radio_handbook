@@ -136,10 +136,5 @@ namespace Radio_handbook.Forms
         {
             MessageBox.Show("Автор програми - Козир Дмитро Миколайович.\nПрограма призначення для зберігання інформації та порівняння компонентів радіоелектроніки.", "Про нас", MessageBoxButtons.OK);
         }
-
-        private void idTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
