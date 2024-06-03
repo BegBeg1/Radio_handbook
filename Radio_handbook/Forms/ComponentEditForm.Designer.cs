@@ -29,23 +29,26 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            capacitanceTextBox = new NumericUpDown();
+            inductanceTextBox = new NumericUpDown();
+            resistanceTextBox = new NumericUpDown();
             idTextBox = new NumericUpDown();
             typeСomboBox = new ComboBox();
             cancelButton = new Button();
             okButton = new Button();
             descriptionTextBox = new TextBox();
             descriptionLabel = new Label();
-            inductanceTextBox = new TextBox();
             inductanceLabel = new Label();
-            capacitanceTextBox = new TextBox();
             capacitanceLabel = new Label();
-            resistanceTextBox = new TextBox();
             resistanceLabel = new Label();
             typeLabel = new Label();
             nameTextBox = new TextBox();
             nameLabel = new Label();
             idLabel = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)capacitanceTextBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)inductanceTextBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)resistanceTextBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)idTextBox).BeginInit();
             SuspendLayout();
             // 
@@ -53,17 +56,17 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(capacitanceTextBox);
+            panel1.Controls.Add(inductanceTextBox);
+            panel1.Controls.Add(resistanceTextBox);
             panel1.Controls.Add(idTextBox);
             panel1.Controls.Add(typeСomboBox);
             panel1.Controls.Add(cancelButton);
             panel1.Controls.Add(okButton);
             panel1.Controls.Add(descriptionTextBox);
             panel1.Controls.Add(descriptionLabel);
-            panel1.Controls.Add(inductanceTextBox);
             panel1.Controls.Add(inductanceLabel);
-            panel1.Controls.Add(capacitanceTextBox);
             panel1.Controls.Add(capacitanceLabel);
-            panel1.Controls.Add(resistanceTextBox);
             panel1.Controls.Add(resistanceLabel);
             panel1.Controls.Add(typeLabel);
             panel1.Controls.Add(nameTextBox);
@@ -73,6 +76,27 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(540, 245);
             panel1.TabIndex = 0;
+            // 
+            // capacitanceTextBox
+            // 
+            capacitanceTextBox.Location = new Point(94, 119);
+            capacitanceTextBox.Name = "capacitanceTextBox";
+            capacitanceTextBox.Size = new Size(427, 23);
+            capacitanceTextBox.TabIndex = 34;
+            // 
+            // inductanceTextBox
+            // 
+            inductanceTextBox.Location = new Point(94, 149);
+            inductanceTextBox.Name = "inductanceTextBox";
+            inductanceTextBox.Size = new Size(427, 23);
+            inductanceTextBox.TabIndex = 33;
+            // 
+            // resistanceTextBox
+            // 
+            resistanceTextBox.Location = new Point(94, 91);
+            resistanceTextBox.Name = "resistanceTextBox";
+            resistanceTextBox.Size = new Size(427, 23);
+            resistanceTextBox.TabIndex = 32;
             // 
             // idTextBox
             // 
@@ -131,13 +155,6 @@
             descriptionLabel.TabIndex = 26;
             descriptionLabel.Text = "Опис";
             // 
-            // inductanceTextBox
-            // 
-            inductanceTextBox.Location = new Point(94, 148);
-            inductanceTextBox.Name = "inductanceTextBox";
-            inductanceTextBox.Size = new Size(427, 23);
-            inductanceTextBox.TabIndex = 25;
-            // 
             // inductanceLabel
             // 
             inductanceLabel.AutoSize = true;
@@ -147,13 +164,6 @@
             inductanceLabel.TabIndex = 24;
             inductanceLabel.Text = "Індуктивність";
             // 
-            // capacitanceTextBox
-            // 
-            capacitanceTextBox.Location = new Point(94, 119);
-            capacitanceTextBox.Name = "capacitanceTextBox";
-            capacitanceTextBox.Size = new Size(427, 23);
-            capacitanceTextBox.TabIndex = 23;
-            // 
             // capacitanceLabel
             // 
             capacitanceLabel.AutoSize = true;
@@ -162,13 +172,6 @@
             capacitanceLabel.Size = new Size(50, 15);
             capacitanceLabel.TabIndex = 22;
             capacitanceLabel.Text = "Ємність";
-            // 
-            // resistanceTextBox
-            // 
-            resistanceTextBox.Location = new Point(94, 90);
-            resistanceTextBox.Name = "resistanceTextBox";
-            resistanceTextBox.Size = new Size(427, 23);
-            resistanceTextBox.TabIndex = 21;
             // 
             // resistanceLabel
             // 
@@ -224,6 +227,9 @@
             Text = "ComponentEditForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)capacitanceTextBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)inductanceTextBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)resistanceTextBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)idTextBox).EndInit();
             ResumeLayout(false);
         }
@@ -235,11 +241,8 @@
         private Button okButton;
         private TextBox descriptionTextBox;
         private Label descriptionLabel;
-        private TextBox inductanceTextBox;
         private Label inductanceLabel;
-        private TextBox capacitanceTextBox;
         private Label capacitanceLabel;
-        private TextBox resistanceTextBox;
         private Label resistanceLabel;
         private Label typeLabel;
         private TextBox nameTextBox;
@@ -247,5 +250,8 @@
         private Label idLabel;
         private ComboBox typeСomboBox;
         private NumericUpDown idTextBox;
+        private NumericUpDown capacitanceTextBox;
+        private NumericUpDown inductanceTextBox;
+        private NumericUpDown resistanceTextBox;
     }
 }
