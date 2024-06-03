@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            resistanceTextBox = new TextBox();
+            idTextBox = new NumericUpDown();
             typeСomboBox = new ComboBox();
             cancelButton = new Button();
             okButton = new Button();
@@ -38,13 +40,11 @@
             inductanceLabel = new Label();
             capacitanceTextBox = new TextBox();
             capacitanceLabel = new Label();
-            resistanceTextBox = new TextBox();
             resistanceLabel = new Label();
             typeLabel = new Label();
             nameTextBox = new TextBox();
             nameLabel = new Label();
             idLabel = new Label();
-            idTextBox = new NumericUpDown();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)idTextBox).BeginInit();
             SuspendLayout();
@@ -52,6 +52,7 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(resistanceTextBox);
             panel1.Controls.Add(idTextBox);
             panel1.Controls.Add(typeСomboBox);
             panel1.Controls.Add(cancelButton);
@@ -62,7 +63,6 @@
             panel1.Controls.Add(inductanceLabel);
             panel1.Controls.Add(capacitanceTextBox);
             panel1.Controls.Add(capacitanceLabel);
-            panel1.Controls.Add(resistanceTextBox);
             panel1.Controls.Add(resistanceLabel);
             panel1.Controls.Add(typeLabel);
             panel1.Controls.Add(nameTextBox);
@@ -72,6 +72,22 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(540, 245);
             panel1.TabIndex = 1;
+            // 
+            // resistanceTextBox
+            // 
+            resistanceTextBox.Location = new Point(94, 90);
+            resistanceTextBox.Name = "resistanceTextBox";
+            resistanceTextBox.Size = new Size(427, 23);
+            resistanceTextBox.TabIndex = 32;
+            // 
+            // idTextBox
+            // 
+            idTextBox.Enabled = false;
+            idTextBox.Location = new Point(94, 6);
+            idTextBox.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            idTextBox.Name = "idTextBox";
+            idTextBox.Size = new Size(427, 23);
+            idTextBox.TabIndex = 2;
             // 
             // typeСomboBox
             // 
@@ -153,13 +169,6 @@
             capacitanceLabel.TabIndex = 22;
             capacitanceLabel.Text = "Ємність";
             // 
-            // resistanceTextBox
-            // 
-            resistanceTextBox.Location = new Point(94, 90);
-            resistanceTextBox.Name = "resistanceTextBox";
-            resistanceTextBox.Size = new Size(427, 23);
-            resistanceTextBox.TabIndex = 21;
-            // 
             // resistanceLabel
             // 
             resistanceLabel.AutoSize = true;
@@ -203,14 +212,6 @@
             idLabel.TabIndex = 14;
             idLabel.Text = "Id";
             // 
-            // idTextBox
-            // 
-            idTextBox.Enabled = false;
-            idTextBox.Location = new Point(94, 6);
-            idTextBox.Name = "idTextBox";
-            idTextBox.Size = new Size(427, 23);
-            idTextBox.TabIndex = 2;
-            // 
             // AddComponentForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -236,7 +237,6 @@
         private Label inductanceLabel;
         private TextBox capacitanceTextBox;
         private Label capacitanceLabel;
-        private TextBox resistanceTextBox;
         private Label resistanceLabel;
         private Label typeLabel;
         private TextBox nameTextBox;
@@ -244,5 +244,6 @@
         private Label idLabel;
         private ComboBox typeСomboBox;
         private NumericUpDown idTextBox;
+        private TextBox resistanceTextBox;
     }
 }

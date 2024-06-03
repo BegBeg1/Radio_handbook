@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            idTextBox = new NumericUpDown();
             typeСomboBox = new ComboBox();
             cancelButton = new Button();
             okButton = new Button();
@@ -43,15 +44,16 @@
             typeLabel = new Label();
             nameTextBox = new TextBox();
             nameLabel = new Label();
-            idTextBox = new TextBox();
             idLabel = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)idTextBox).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(idTextBox);
             panel1.Controls.Add(typeСomboBox);
             panel1.Controls.Add(cancelButton);
             panel1.Controls.Add(okButton);
@@ -66,12 +68,20 @@
             panel1.Controls.Add(typeLabel);
             panel1.Controls.Add(nameTextBox);
             panel1.Controls.Add(nameLabel);
-            panel1.Controls.Add(idTextBox);
             panel1.Controls.Add(idLabel);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(540, 245);
             panel1.TabIndex = 0;
+            // 
+            // idTextBox
+            // 
+            idTextBox.Enabled = false;
+            idTextBox.Location = new Point(94, 4);
+            idTextBox.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            idTextBox.Name = "idTextBox";
+            idTextBox.Size = new Size(427, 23);
+            idTextBox.TabIndex = 31;
             // 
             // typeСomboBox
             // 
@@ -82,7 +92,7 @@
             typeСomboBox.Name = "typeСomboBox";
             typeСomboBox.Size = new Size(427, 23);
             typeСomboBox.TabIndex = 30;
-            typeСomboBox.SelectedIndexChanged += this.typeСomboBox_SelectedIndexChanged;
+            typeСomboBox.SelectedIndexChanged += typeСomboBox_SelectedIndexChanged;
             // 
             // cancelButton
             // 
@@ -194,14 +204,6 @@
             nameLabel.TabIndex = 16;
             nameLabel.Text = "Назва";
             // 
-            // idTextBox
-            // 
-            idTextBox.Location = new Point(94, 3);
-            idTextBox.Name = "idTextBox";
-            idTextBox.ReadOnly = true;
-            idTextBox.Size = new Size(427, 23);
-            idTextBox.TabIndex = 15;
-            // 
             // idLabel
             // 
             idLabel.AutoSize = true;
@@ -222,6 +224,7 @@
             Text = "ComponentEditForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)idTextBox).EndInit();
             ResumeLayout(false);
         }
 
@@ -241,8 +244,8 @@
         private Label typeLabel;
         private TextBox nameTextBox;
         private Label nameLabel;
-        private TextBox idTextBox;
         private Label idLabel;
         private ComboBox typeСomboBox;
+        private NumericUpDown idTextBox;
     }
 }

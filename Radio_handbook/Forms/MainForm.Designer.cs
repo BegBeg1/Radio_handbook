@@ -40,6 +40,7 @@
             helpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
+            idTextBox = new NumericUpDown();
             typeСomboBox = new ComboBox();
             descriptionTextBox = new TextBox();
             descriptionLabel = new Label();
@@ -53,7 +54,6 @@
             typeLabel = new Label();
             nameTextBox = new TextBox();
             nameLabel = new Label();
-            idTextBox = new TextBox();
             idLabel = new Label();
             addButton = new Button();
             changeButton = new Button();
@@ -69,6 +69,7 @@
             radioComponentBindingSource = new BindingSource(components);
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)idTextBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).BeginInit();
             SuspendLayout();
@@ -106,28 +107,28 @@
             // searchToolStripMenuItem
             // 
             searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            searchToolStripMenuItem.Size = new Size(180, 22);
+            searchToolStripMenuItem.Size = new Size(126, 22);
             searchToolStripMenuItem.Text = "Пошук";
             searchToolStripMenuItem.Click += searchToolStripMenuItem_Click;
             // 
             // addToolStripMenuItem
             // 
             addToolStripMenuItem.Name = "addToolStripMenuItem";
-            addToolStripMenuItem.Size = new Size(180, 22);
+            addToolStripMenuItem.Size = new Size(126, 22);
             addToolStripMenuItem.Text = "Додати";
             addToolStripMenuItem.Click += customizeToolStripMenuItem_Click;
             // 
             // optionsToolStripMenuItem
             // 
             optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            optionsToolStripMenuItem.Size = new Size(180, 22);
+            optionsToolStripMenuItem.Size = new Size(126, 22);
             optionsToolStripMenuItem.Text = "Змінити";
             optionsToolStripMenuItem.Click += optionsToolStripMenuItem_Click;
             // 
             // видалитиToolStripMenuItem
             // 
             видалитиToolStripMenuItem.Name = "видалитиToolStripMenuItem";
-            видалитиToolStripMenuItem.Size = new Size(180, 22);
+            видалитиToolStripMenuItem.Size = new Size(126, 22);
             видалитиToolStripMenuItem.Text = "Видалити";
             видалитиToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
             // 
@@ -149,6 +150,7 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(idTextBox);
             panel1.Controls.Add(typeСomboBox);
             panel1.Controls.Add(descriptionTextBox);
             panel1.Controls.Add(descriptionLabel);
@@ -162,12 +164,19 @@
             panel1.Controls.Add(typeLabel);
             panel1.Controls.Add(nameTextBox);
             panel1.Controls.Add(nameLabel);
-            panel1.Controls.Add(idTextBox);
             panel1.Controls.Add(idLabel);
             panel1.Location = new Point(131, 27);
             panel1.Name = "panel1";
             panel1.Size = new Size(533, 258);
             panel1.TabIndex = 1;
+            // 
+            // idTextBox
+            // 
+            idTextBox.Location = new Point(92, 14);
+            idTextBox.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            idTextBox.Name = "idTextBox";
+            idTextBox.Size = new Size(427, 23);
+            idTextBox.TabIndex = 22;
             // 
             // typeСomboBox
             // 
@@ -278,13 +287,6 @@
             nameLabel.Size = new Size(39, 15);
             nameLabel.TabIndex = 2;
             nameLabel.Text = "Назва";
-            // 
-            // idTextBox
-            // 
-            idTextBox.Location = new Point(92, 14);
-            idTextBox.Name = "idTextBox";
-            idTextBox.Size = new Size(427, 23);
-            idTextBox.TabIndex = 1;
             // 
             // idLabel
             // 
@@ -418,6 +420,7 @@
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)idTextBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).EndInit();
             ResumeLayout(false);
@@ -441,7 +444,6 @@
         private Label typeLabel;
         private TextBox nameTextBox;
         private Label nameLabel;
-        private TextBox idTextBox;
         private Label idLabel;
         private Button searchButton;
         private TextBox capacitanceTextBox;
@@ -465,5 +467,6 @@
         private BindingSource radioComponentBindingSource;
         private ToolStripMenuItem видалитиToolStripMenuItem;
         private ToolStripMenuItem searchToolStripMenuItem;
+        private NumericUpDown idTextBox;
     }
 }

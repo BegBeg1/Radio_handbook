@@ -21,6 +21,7 @@ namespace Radio_handbook.Forms
         {
             InitializeComponent();
             typeСomboBox.SelectedIndex = 0;
+            idTextBox.Text = "";
             searchButton_Click(null, null);
         }
         private void typeСomboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -131,6 +132,11 @@ namespace Radio_handbook.Forms
         private void aboutToolStripMenuItem_Click(Object sender, EventArgs e)
         {
             MessageBox.Show("Автор програми - Козир Дмитро Миколайович.\nПрограма призначення для зберігання інформації та порівняння компонентів радіоелектроніки.", "Про нас", MessageBoxButtons.OK);
+        }
+
+        private void idTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
