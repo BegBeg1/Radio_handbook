@@ -87,19 +87,30 @@ namespace Radio_handbook.Forms
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            handbook.Add(new RadioComponent
+
+            var result = new RadioComponent
             {
                 Id = Convert.ToInt32(idTextBox.Text),
                 Name = nameTextBox.Text.Trim(),
                 Type = typeСomboBox.Text,
-                //Resistance = Convert.ToDouble(resistanceTextBox.Text),
-                //Capacitance = Convert.ToDouble(capacitanceTextBox.Text),
-                //Inductance = Convert.ToDouble(inductanceTextBox.Text),
                 Resistance = null,
                 Capacitance = null,
                 Inductance = null,
                 Description = descriptionTextBox.Text.Trim()
-            });
+            };
+            if (typeСomboBox.SelectedIndex == 0) 
+            {
+                result.Resistance = Convert.ToDouble(resistanceTextBox.Text);
+            }
+            else if (typeСomboBox.SelectedIndex == 1)
+            {
+                result.Capacitance = Convert.ToDouble(capacitanceTextBox.Text);
+            }
+            else
+            {
+                result.Inductance = Convert.ToDouble(inductanceTextBox.Text);
+            }
+            handbook.Add(result);
             Close();
         }
 
