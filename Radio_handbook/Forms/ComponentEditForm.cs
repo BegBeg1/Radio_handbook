@@ -36,10 +36,6 @@ namespace Radio_handbook.Forms
         }
         private void TextChanged(object sender, EventArgs e)
         {
-            textChangedCheck();
-        }
-        private void textChangedCheck()
-        {
             if (nameTextBox.Text.Trim() == "" || 
                 ((typeСomboBox.SelectedIndex == 0 && resistanceTextBox.Text.Trim() == "") ||
                 (typeСomboBox.SelectedIndex == 1 && capacitanceTextBox.Text.Trim() == "") ||
@@ -48,8 +44,8 @@ namespace Radio_handbook.Forms
                 okButton.Enabled = false;
             }
             else
-            {
-                okButton.Enabled = true;
+            { 
+                okButton.Enabled = true; 
             }
         }
         private void typeСomboBox_SelectedIndexChanged(object sender, EventArgs e)

@@ -27,58 +27,7 @@ namespace Radio_handbook.Forms
             {
                 idTextBox.Text = "1";
             }
-            typeСomboBox.SelectedIndex = 0;
-            nameTextBox.TextChanged += new EventHandler(TextChanged);
-            resistanceTextBox.TextChanged += new EventHandler(TextChanged);
-            capacitanceTextBox.TextChanged += new EventHandler(TextChanged);
-            inductanceTextBox.TextChanged += new EventHandler(TextChanged);
-            TextChangedCheck();
-        }
-        void TextChangedCheck()
-        {
-            if (nameTextBox.Text.Trim() == "" ||
-                ((typeСomboBox.SelectedIndex == 0 && resistanceTextBox.Text.Trim() == "") ||
-                (typeСomboBox.SelectedIndex == 1 && capacitanceTextBox.Text.Trim() == "") ||
-                (typeСomboBox.SelectedIndex == 2 && inductanceTextBox.Text.Trim() == "")))
-            {
-                okButton.Enabled = false;
-            }
-            else
-            {
-                okButton.Enabled = true;
-            }
-        }
-        private void TextChanged(object sender, EventArgs e)
-        {
-            TextChangedCheck();
-        }
-        
-        private void typeСomboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (typeСomboBox.SelectedIndex)
-            {
-                case 0:
-                    resistanceTextBox.Enabled = true;
-                    capacitanceTextBox.Text = "";
-                    capacitanceTextBox.Enabled = false;
-                    inductanceTextBox.Text = "";
-                    inductanceTextBox.Enabled = false;
-                    break;
-                case 1:
-                    resistanceTextBox.Text = "";
-                    resistanceTextBox.Enabled = false;
-                    capacitanceTextBox.Enabled = true;
-                    inductanceTextBox.Text = "";
-                    inductanceTextBox.Enabled = false;
-                    break;
-                case 2:
-                    resistanceTextBox.Text = "";
-                    resistanceTextBox.Enabled = false;
-                    capacitanceTextBox.Text = "";
-                    capacitanceTextBox.Enabled = false;
-                    inductanceTextBox.Enabled = true;
-                    break;
-            }
+            
         }
 
         private void idTextBox_TextChanged(object sender, EventArgs e)
@@ -92,7 +41,7 @@ namespace Radio_handbook.Forms
             {
                 Id = Convert.ToInt32(idTextBox.Text),
                 Name = nameTextBox.Text.Trim(),
-                Type = typeСomboBox.Text,
+                Type = typeTextBox.Text.Trim(),
                 //Resistance = Convert.ToDouble(resistanceTextBox.Text),
                 //Capacitance = Convert.ToDouble(capacitanceTextBox.Text),
                 //Inductance = Convert.ToDouble(inductanceTextBox.Text),
