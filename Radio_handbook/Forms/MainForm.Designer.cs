@@ -63,8 +63,6 @@
             changeButton = new Button();
             deleteButton = new Button();
             dataGridView1 = new DataGridView();
-            radioComponentBindingSource = new BindingSource(components);
-            radioComponentBindingSource1 = new BindingSource(components);
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             typeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -74,6 +72,8 @@
             сurrentDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             priceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             descriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            radioComponentBindingSource1 = new BindingSource(components);
+            radioComponentBindingSource = new BindingSource(components);
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)priceNumericUpDown).BeginInit();
@@ -82,8 +82,8 @@
             ((System.ComponentModel.ISupportInitialize)voltageNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)idNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -351,7 +351,7 @@
             // addButton
             // 
             addButton.Anchor = AnchorStyles.Bottom;
-            addButton.Location = new Point(283, 510);
+            addButton.Location = new Point(283, 617);
             addButton.Name = "addButton";
             addButton.Size = new Size(110, 30);
             addButton.TabIndex = 17;
@@ -362,7 +362,7 @@
             // changeButton
             // 
             changeButton.Anchor = AnchorStyles.Bottom;
-            changeButton.Location = new Point(428, 510);
+            changeButton.Location = new Point(428, 617);
             changeButton.Name = "changeButton";
             changeButton.Size = new Size(110, 30);
             changeButton.TabIndex = 18;
@@ -373,7 +373,7 @@
             // deleteButton
             // 
             deleteButton.Anchor = AnchorStyles.Bottom;
-            deleteButton.Location = new Point(563, 510);
+            deleteButton.Location = new Point(563, 617);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(110, 30);
             deleteButton.TabIndex = 19;
@@ -396,16 +396,8 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(917, 155);
+            dataGridView1.Size = new Size(917, 262);
             dataGridView1.TabIndex = 20;
-            // 
-            // radioComponentBindingSource
-            // 
-            radioComponentBindingSource.DataSource = typeof(Models.RadioComponent);
-            // 
-            // radioComponentBindingSource1
-            // 
-            radioComponentBindingSource1.DataSource = typeof(Models.RadioComponent);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -470,11 +462,19 @@
             descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // radioComponentBindingSource1
+            // 
+            radioComponentBindingSource1.DataSource = typeof(Models.RadioComponent);
+            // 
+            // radioComponentBindingSource
+            // 
+            radioComponentBindingSource.DataSource = typeof(Models.RadioComponent);
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(936, 541);
+            ClientSize = new Size(936, 648);
             Controls.Add(dataGridView1);
             Controls.Add(deleteButton);
             Controls.Add(changeButton);
@@ -482,7 +482,7 @@
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            MinimumSize = new Size(530, 580);
+            MinimumSize = new Size(560, 580);
             Name = "MainForm";
             Text = "MainForm";
             menuStrip1.ResumeLayout(false);
@@ -495,8 +495,8 @@
             ((System.ComponentModel.ISupportInitialize)voltageNumericUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)idNumericUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
