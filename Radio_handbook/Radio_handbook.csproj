@@ -9,8 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="save\**" />
+    <EmbeddedResource Remove="save\**" />
+    <None Remove="save\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Documents\" />
-    <Folder Include="save\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,9 +35,6 @@
 
   <ItemGroup>
     <None Update="data.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="save\data.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
