@@ -127,7 +127,7 @@
             cancelButton.Name = "cancelButton";
             cancelButton.Size = new Size(114, 29);
             cancelButton.TabIndex = 17;
-            cancelButton.Text = "Cancel";
+            cancelButton.Text = "Відміна";
             cancelButton.UseVisualStyleBackColor = true;
             cancelButton.Click += cancelButton_Click;
             // 
@@ -138,7 +138,7 @@
             okButton.Name = "okButton";
             okButton.Size = new Size(114, 29);
             okButton.TabIndex = 16;
-            okButton.Text = "Ok";
+            okButton.Text = "Ок";
             okButton.UseVisualStyleBackColor = true;
             okButton.Click += okButton_Click;
             // 
