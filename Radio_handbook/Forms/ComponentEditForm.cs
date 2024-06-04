@@ -31,9 +31,11 @@ namespace Radio_handbook.Forms
             idNumericUpDown.Text = radioComponent.Id.ToString();
             nameTextBox.Text = radioComponent.Name;
             typeСomboBox.Text = radioComponent.Type;
+            brandTextBox.Text = radioComponent.Brand;
             resistanceNumericUpDown.Text = radioComponent.Resistance.ToString();
             voltageNumericUpDown.Text = radioComponent.Voltage.ToString();
             currentNumericUpDown.Text = radioComponent.Сurrent.ToString();
+            priceNumericUpDown.Text = radioComponent.Price.ToString();
             descriptionTextBox.Text = radioComponent.Description;
 
         }
