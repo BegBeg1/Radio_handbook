@@ -484,7 +484,7 @@
             MainMenuStrip = menuStrip1;
             MinimumSize = new Size(560, 580);
             Name = "MainForm";
-            Text = "MainForm";
+            Text = "Довідник радіолюбителя";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            priceNumericUpDown = new NumericUpDown();
+            priceLabel = new Label();
+            brandTextBox = new TextBox();
+            brandLabel = new Label();
             resistanceNumericUpDown = new NumericUpDown();
             voltageNumericUpDown = new NumericUpDown();
             currentNumericUpDown = new NumericUpDown();
@@ -45,20 +49,17 @@
             nameTextBox = new TextBox();
             nameLabel = new Label();
             idLabel = new Label();
-            brandTextBox = new TextBox();
-            brandLabel = new Label();
-            priceNumericUpDown = new NumericUpDown();
-            priceLabel = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)priceNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)resistanceNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)voltageNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)currentNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)idNumericUpDown).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)priceNumericUpDown).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.None;
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(priceNumericUpDown);
             panel1.Controls.Add(priceLabel);
@@ -84,6 +85,39 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(540, 301);
             panel1.TabIndex = 1;
+            // 
+            // priceNumericUpDown
+            // 
+            priceNumericUpDown.Location = new Point(94, 206);
+            priceNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            priceNumericUpDown.Name = "priceNumericUpDown";
+            priceNumericUpDown.Size = new Size(427, 23);
+            priceNumericUpDown.TabIndex = 21;
+            // 
+            // priceLabel
+            // 
+            priceLabel.AutoSize = true;
+            priceLabel.Location = new Point(10, 208);
+            priceLabel.Name = "priceLabel";
+            priceLabel.Size = new Size(32, 15);
+            priceLabel.TabIndex = 20;
+            priceLabel.Text = "Ціна";
+            // 
+            // brandTextBox
+            // 
+            brandTextBox.Location = new Point(94, 61);
+            brandTextBox.Name = "brandTextBox";
+            brandTextBox.Size = new Size(427, 23);
+            brandTextBox.TabIndex = 19;
+            // 
+            // brandLabel
+            // 
+            brandLabel.AutoSize = true;
+            brandLabel.Location = new Point(10, 64);
+            brandLabel.Name = "brandLabel";
+            brandLabel.Size = new Size(40, 15);
+            brandLabel.TabIndex = 18;
+            brandLabel.Text = "Бренд";
             // 
             // resistanceNumericUpDown
             // 
@@ -226,54 +260,22 @@
             idLabel.TabIndex = 2;
             idLabel.Text = "Id";
             // 
-            // brandTextBox
-            // 
-            brandTextBox.Location = new Point(94, 61);
-            brandTextBox.Name = "brandTextBox";
-            brandTextBox.Size = new Size(427, 23);
-            brandTextBox.TabIndex = 19;
-            // 
-            // brandLabel
-            // 
-            brandLabel.AutoSize = true;
-            brandLabel.Location = new Point(10, 64);
-            brandLabel.Name = "brandLabel";
-            brandLabel.Size = new Size(40, 15);
-            brandLabel.TabIndex = 18;
-            brandLabel.Text = "Бренд";
-            // 
-            // priceNumericUpDown
-            // 
-            priceNumericUpDown.Location = new Point(94, 206);
-            priceNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
-            priceNumericUpDown.Name = "priceNumericUpDown";
-            priceNumericUpDown.Size = new Size(427, 23);
-            priceNumericUpDown.TabIndex = 21;
-            // 
-            // priceLabel
-            // 
-            priceLabel.AutoSize = true;
-            priceLabel.Location = new Point(10, 208);
-            priceLabel.Name = "priceLabel";
-            priceLabel.Size = new Size(32, 15);
-            priceLabel.TabIndex = 20;
-            priceLabel.Text = "Ціна";
-            // 
             // AddComponentForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(564, 321);
+            ClientSize = new Size(564, 325);
             Controls.Add(panel1);
+            MinimumSize = new Size(580, 364);
             Name = "AddComponentForm";
-            Text = "AddComponentForm";
+            Text = "Вікно створення елемента";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)priceNumericUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)resistanceNumericUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)voltageNumericUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)currentNumericUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)idNumericUpDown).EndInit();
-            ((System.ComponentModel.ISupportInitialize)priceNumericUpDown).EndInit();
             ResumeLayout(false);
         }
 

@@ -44,7 +44,7 @@ namespace Radio_handbook.Forms
         private void textChangedCheck()
         {
             if (nameTextBox.Text.Trim() == "" || resistanceNumericUpDown.Text.Trim() == "" ||
-                brandTextBox.Text.Trim() == "" || voltageNumericUpDown.Text.Trim() == "" || 
+                brandTextBox.Text.Trim() == "" || voltageNumericUpDown.Text.Trim() == "" ||
                 currentNumericUpDown.Text.Trim() == "" || priceNumericUpDown.Text.Trim() == "")
             {
                 okButton.Enabled = false;
@@ -74,6 +74,11 @@ namespace Radio_handbook.Forms
         private void cancelButton_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void ComponentEditForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
