@@ -24,41 +24,10 @@ namespace Radio_handbook.Forms
             typeСomboBox.SelectedIndex = 0;
             idNumericUpDown.Text = "";
             resistanceNumericUpDown.Text = "";
-            capacitanceNumericUpDown.Text = "";
-            inductanceNumericUpDown.Text = "";
+            voltageNumericUpDown.Text = "";
+            currentNumericUpDown.Text = "";
+            priceNumericUpDown.Text = "";
             searchButton_Click(null, null);
-        }
-        private void typeСomboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (typeСomboBox.SelectedIndex)
-            {
-                case 0:
-                    resistanceNumericUpDown.Enabled = true;
-                    capacitanceNumericUpDown.Enabled = true;
-                    inductanceNumericUpDown.Enabled = true;
-                    break;
-                case 1:
-                    resistanceNumericUpDown.Enabled = true;
-                    capacitanceNumericUpDown.Text = "";
-                    capacitanceNumericUpDown.Enabled = false;
-                    inductanceNumericUpDown.Text = "";
-                    inductanceNumericUpDown.Enabled = false;
-                    break;
-                case 2:
-                    resistanceNumericUpDown.Text = "";
-                    resistanceNumericUpDown.Enabled = false;
-                    capacitanceNumericUpDown.Enabled = true;
-                    inductanceNumericUpDown.Text = "";
-                    inductanceNumericUpDown.Enabled = false;
-                    break;
-                case 3:
-                    resistanceNumericUpDown.Text = "";
-                    resistanceNumericUpDown.Enabled = false;
-                    capacitanceNumericUpDown.Text = "";
-                    capacitanceNumericUpDown.Enabled = false;
-                    inductanceNumericUpDown.Enabled = true;
-                    break;
-            }
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -83,8 +52,9 @@ namespace Radio_handbook.Forms
         private void searchButton_Click(object sender, EventArgs e)
         {
             var result = handbook.Search(idNumericUpDown.Text.Trim(), nameTextBox.Text.Trim(), typeСomboBox.Text.Trim(),
-                                            resistanceNumericUpDown.Text.Trim(), capacitanceNumericUpDown.Text.Trim(),
-                                            inductanceNumericUpDown.Text.Trim(), descriptionTextBox.Text.Trim());
+                                            brandTextBox.Text.Trim(), resistanceNumericUpDown.Text.Trim(), 
+                                            voltageNumericUpDown.Text.Trim(), currentNumericUpDown.Text.Trim(),
+                                            priceNumericUpDown.Text.Trim() ,descriptionTextBox.Text.Trim());
             dataGridView1.DataSource = result;
         }
         private void addButton_Click(Object sender, EventArgs e)

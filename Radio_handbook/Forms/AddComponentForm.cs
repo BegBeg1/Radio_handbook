@@ -19,8 +19,9 @@ namespace Radio_handbook.Forms
             InitializeComponent();
 
             resistanceNumericUpDown.Text = "";
-            capacitanceNumericUpDown.Text = "";
-            inductanceNumericUpDown.Text = "";
+            voltageNumericUpDown.Text = "";
+            currentNumericUpDown.Text = "";
+            priceNumericUpDown.Text = "";
 
             this.handbook = handbook;
             if (handbook.Count != 0)
@@ -33,17 +34,18 @@ namespace Radio_handbook.Forms
             }
             typeСomboBox.SelectedIndex = 0;
             nameTextBox.TextChanged += new EventHandler(TextChanged);
+            brandTextBox.TextChanged += new EventHandler(TextChanged);
             resistanceNumericUpDown.TextChanged += new EventHandler(TextChanged);
-            capacitanceNumericUpDown.TextChanged += new EventHandler(TextChanged);
-            inductanceNumericUpDown.TextChanged += new EventHandler(TextChanged);
+            voltageNumericUpDown.TextChanged += new EventHandler(TextChanged);
+            currentNumericUpDown.TextChanged += new EventHandler(TextChanged);
+            priceNumericUpDown.TextChanged += new EventHandler(TextChanged);
             TextChangedCheck();
         }
         void TextChangedCheck()
         {
-            if (nameTextBox.Text.Trim() == "" ||
-                ((typeСomboBox.SelectedIndex == 0 && resistanceNumericUpDown.Text.Trim() == "") ||
-                (typeСomboBox.SelectedIndex == 1 && capacitanceNumericUpDown.Text.Trim() == "") ||
-                (typeСomboBox.SelectedIndex == 2 && inductanceNumericUpDown.Text.Trim() == "")))
+            if (nameTextBox.Text.Trim() == "" || resistanceNumericUpDown.Text.Trim() == "" ||
+                brandTextBox.Text.Trim() == "" || voltageNumericUpDown.Text.Trim() == "" ||
+                currentNumericUpDown.Text.Trim() == "" || priceNumericUpDown.Text.Trim() == "")
             {
                 okButton.Enabled = false;
             }
@@ -56,39 +58,6 @@ namespace Radio_handbook.Forms
         {
             TextChangedCheck();
         }
-        
-        private void typeСomboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (typeСomboBox.SelectedIndex)
-            {
-                case 0:
-                    resistanceNumericUpDown.Enabled = true;
-                    capacitanceNumericUpDown.Text = "";
-                    capacitanceNumericUpDown.Enabled = false;
-                    inductanceNumericUpDown.Text = "";
-                    inductanceNumericUpDown.Enabled = false;
-                    break;
-                case 1:
-                    resistanceNumericUpDown.Text = "";
-                    resistanceNumericUpDown.Enabled = false;
-                    capacitanceNumericUpDown.Enabled = true;
-                    inductanceNumericUpDown.Text = "";
-                    inductanceNumericUpDown.Enabled = false;
-                    break;
-                case 2:
-                    resistanceNumericUpDown.Text = "";
-                    resistanceNumericUpDown.Enabled = false;
-                    capacitanceNumericUpDown.Text = "";
-                    capacitanceNumericUpDown.Enabled = false;
-                    inductanceNumericUpDown.Enabled = true;
-                    break;
-                case 3:
-                    resistanceNumericUpDown.Enabled = true;
-                    capacitanceNumericUpDown.Enabled = true;
-                    inductanceNumericUpDown.Enabled = true;
-                    break;
-            }
-        }
 
         private void okButton_Click(object sender, EventArgs e)
         {
@@ -98,23 +67,13 @@ namespace Radio_handbook.Forms
                 Id = Convert.ToInt32(idNumericUpDown.Text),
                 Name = nameTextBox.Text.Trim(),
                 Type = typeСomboBox.Text,
-                Resistance = null,
-                Capacitance = null,
-                Inductance = null,
+                Brand = brandTextBox.Text.Trim(),
+                Resistance = Convert.ToDouble(resistanceNumericUpDown.Text),
+                Voltage = Convert.ToDouble(voltageNumericUpDown.Text),
+                Сurrent = Convert.ToDouble(currentNumericUpDown.Text),
+                Price = Convert.ToDouble(priceNumericUpDown.Text),
                 Description = descriptionTextBox.Text.Trim()
             };
-            if (typeСomboBox.SelectedIndex == 0) 
-            {
-                result.Resistance = Convert.ToDouble(resistanceNumericUpDown.Text);
-            }
-            else if (typeСomboBox.SelectedIndex == 1)
-            {
-                result.Capacitance = Convert.ToDouble(capacitanceNumericUpDown.Text);
-            }
-            else
-            {
-                result.Inductance = Convert.ToDouble(inductanceNumericUpDown.Text);
-            }
             handbook.Add(result);
             Close();
         }

@@ -20,8 +20,8 @@ namespace Radio_handbook.Models
         {
             this.RadioComponents = radioComponents;
         }
-        public List <RadioComponent> Search(string id, string name, string type, string resistance, 
-                                            string capacitance, string inductance, string description)
+        public List <RadioComponent> Search(string id, string name, string type, string brand, string resistance, 
+                                            string voltage, string current, string price, string description)
         {
             var result = new List<RadioComponent>();
             foreach(var item in RadioComponents)
@@ -29,9 +29,11 @@ namespace Radio_handbook.Models
                 if (item.Id.ToString().Contains(id) &&
                     item.Name.Contains(name) &&
                     item.Type.Contains(type) &&
+                    item.Brand.Contains(brand) &&
                     item.Resistance.ToString().Contains(resistance) &&
-                    item.Capacitance.ToString().Contains(capacitance) &&
-                    item.Inductance.ToString().Contains(inductance) &&
+                    item.Voltage.ToString().Contains(voltage) &&
+                    item.Сurrent.ToString().Contains(current) &&
+                    item.Price.ToString().Contains(price) &&
                     item.Description.Contains(description))
                 {
                     result.Add(item);

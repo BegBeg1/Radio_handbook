@@ -40,15 +40,19 @@
             helpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
-            inductanceNumericUpDown = new NumericUpDown();
+            priceNumericUpDown = new NumericUpDown();
+            priceLabel = new Label();
+            brandTextBox = new TextBox();
+            brandLabel = new Label();
+            currentNumericUpDown = new NumericUpDown();
             resistanceNumericUpDown = new NumericUpDown();
-            capacitanceNumericUpDown = new NumericUpDown();
+            voltageNumericUpDown = new NumericUpDown();
             idNumericUpDown = new NumericUpDown();
             typeСomboBox = new ComboBox();
             descriptionTextBox = new TextBox();
             descriptionLabel = new Label();
-            inductanceLabel = new Label();
-            capacitanceLabel = new Label();
+            currentLabel = new Label();
+            voltageLabel = new Label();
             searchButton = new Button();
             resistanceLabel = new Label();
             typeLabel = new Label();
@@ -59,22 +63,27 @@
             changeButton = new Button();
             deleteButton = new Button();
             dataGridView1 = new DataGridView();
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            typeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            resistanceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            capacitanceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            inductanceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            descriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             radioComponentBindingSource = new BindingSource(components);
+            radioComponentBindingSource1 = new BindingSource(components);
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            typeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            brandDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            resistanceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            voltageDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            сurrentDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            priceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            descriptionDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)inductanceNumericUpDown).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)priceNumericUpDown).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)currentNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)resistanceNumericUpDown).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)capacitanceNumericUpDown).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)voltageNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)idNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -82,7 +91,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, toolsToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(724, 24);
+            menuStrip1.Size = new Size(936, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -153,49 +162,86 @@
             // 
             panel1.Anchor = AnchorStyles.Top;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(inductanceNumericUpDown);
+            panel1.Controls.Add(priceNumericUpDown);
+            panel1.Controls.Add(priceLabel);
+            panel1.Controls.Add(brandTextBox);
+            panel1.Controls.Add(brandLabel);
+            panel1.Controls.Add(currentNumericUpDown);
             panel1.Controls.Add(resistanceNumericUpDown);
-            panel1.Controls.Add(capacitanceNumericUpDown);
+            panel1.Controls.Add(voltageNumericUpDown);
             panel1.Controls.Add(idNumericUpDown);
             panel1.Controls.Add(typeСomboBox);
             panel1.Controls.Add(descriptionTextBox);
             panel1.Controls.Add(descriptionLabel);
-            panel1.Controls.Add(inductanceLabel);
-            panel1.Controls.Add(capacitanceLabel);
+            panel1.Controls.Add(currentLabel);
+            panel1.Controls.Add(voltageLabel);
             panel1.Controls.Add(searchButton);
             panel1.Controls.Add(resistanceLabel);
             panel1.Controls.Add(typeLabel);
             panel1.Controls.Add(nameTextBox);
             panel1.Controls.Add(nameLabel);
             panel1.Controls.Add(idLabel);
-            panel1.Location = new Point(96, 27);
+            panel1.Location = new Point(202, 27);
             panel1.Name = "panel1";
-            panel1.Size = new Size(533, 258);
+            panel1.Size = new Size(533, 316);
             panel1.TabIndex = 1;
             // 
-            // inductanceNumericUpDown
+            // priceNumericUpDown
             // 
-            inductanceNumericUpDown.Location = new Point(92, 159);
-            inductanceNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
-            inductanceNumericUpDown.Name = "inductanceNumericUpDown";
-            inductanceNumericUpDown.Size = new Size(427, 23);
-            inductanceNumericUpDown.TabIndex = 12;
+            priceNumericUpDown.Location = new Point(92, 217);
+            priceNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            priceNumericUpDown.Name = "priceNumericUpDown";
+            priceNumericUpDown.Size = new Size(427, 23);
+            priceNumericUpDown.TabIndex = 19;
+            // 
+            // priceLabel
+            // 
+            priceLabel.AutoSize = true;
+            priceLabel.Location = new Point(8, 219);
+            priceLabel.Name = "priceLabel";
+            priceLabel.Size = new Size(32, 15);
+            priceLabel.TabIndex = 18;
+            priceLabel.Text = "Ціна";
+            // 
+            // brandTextBox
+            // 
+            brandTextBox.Location = new Point(92, 101);
+            brandTextBox.Name = "brandTextBox";
+            brandTextBox.Size = new Size(427, 23);
+            brandTextBox.TabIndex = 17;
+            // 
+            // brandLabel
+            // 
+            brandLabel.AutoSize = true;
+            brandLabel.Location = new Point(8, 104);
+            brandLabel.Name = "brandLabel";
+            brandLabel.Size = new Size(40, 15);
+            brandLabel.TabIndex = 16;
+            brandLabel.Text = "Бренд";
+            // 
+            // currentNumericUpDown
+            // 
+            currentNumericUpDown.Location = new Point(92, 188);
+            currentNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            currentNumericUpDown.Name = "currentNumericUpDown";
+            currentNumericUpDown.Size = new Size(427, 23);
+            currentNumericUpDown.TabIndex = 12;
             // 
             // resistanceNumericUpDown
             // 
-            resistanceNumericUpDown.Location = new Point(92, 101);
+            resistanceNumericUpDown.Location = new Point(92, 130);
             resistanceNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             resistanceNumericUpDown.Name = "resistanceNumericUpDown";
             resistanceNumericUpDown.Size = new Size(427, 23);
             resistanceNumericUpDown.TabIndex = 8;
             // 
-            // capacitanceNumericUpDown
+            // voltageNumericUpDown
             // 
-            capacitanceNumericUpDown.Location = new Point(92, 130);
-            capacitanceNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
-            capacitanceNumericUpDown.Name = "capacitanceNumericUpDown";
-            capacitanceNumericUpDown.Size = new Size(427, 23);
-            capacitanceNumericUpDown.TabIndex = 10;
+            voltageNumericUpDown.Location = new Point(92, 159);
+            voltageNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            voltageNumericUpDown.Name = "voltageNumericUpDown";
+            voltageNumericUpDown.Size = new Size(427, 23);
+            voltageNumericUpDown.TabIndex = 10;
             // 
             // idNumericUpDown
             // 
@@ -209,16 +255,15 @@
             // 
             typeСomboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             typeСomboBox.FormattingEnabled = true;
-            typeСomboBox.Items.AddRange(new object[] { "", "Резистор", "Конденсатор", "Котушка індуктивності" });
+            typeСomboBox.Items.AddRange(new object[] { "", "Резистор", "Транзистор", "Діод", "Тиристор" });
             typeСomboBox.Location = new Point(92, 72);
             typeСomboBox.Name = "typeСomboBox";
             typeСomboBox.Size = new Size(427, 23);
             typeСomboBox.TabIndex = 6;
-            typeСomboBox.SelectedIndexChanged += typeСomboBox_SelectedIndexChanged;
             // 
             // descriptionTextBox
             // 
-            descriptionTextBox.Location = new Point(92, 188);
+            descriptionTextBox.Location = new Point(92, 246);
             descriptionTextBox.Name = "descriptionTextBox";
             descriptionTextBox.Size = new Size(427, 23);
             descriptionTextBox.TabIndex = 14;
@@ -226,33 +271,33 @@
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new Point(8, 191);
+            descriptionLabel.Location = new Point(8, 249);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new Size(36, 15);
             descriptionLabel.TabIndex = 13;
             descriptionLabel.Text = "Опис";
             // 
-            // inductanceLabel
+            // currentLabel
             // 
-            inductanceLabel.AutoSize = true;
-            inductanceLabel.Location = new Point(8, 162);
-            inductanceLabel.Name = "inductanceLabel";
-            inductanceLabel.Size = new Size(80, 15);
-            inductanceLabel.TabIndex = 11;
-            inductanceLabel.Text = "Індуктивність";
+            currentLabel.AutoSize = true;
+            currentLabel.Location = new Point(8, 191);
+            currentLabel.Name = "currentLabel";
+            currentLabel.Size = new Size(42, 15);
+            currentLabel.TabIndex = 11;
+            currentLabel.Text = "Струм";
             // 
-            // capacitanceLabel
+            // voltageLabel
             // 
-            capacitanceLabel.AutoSize = true;
-            capacitanceLabel.Location = new Point(8, 133);
-            capacitanceLabel.Name = "capacitanceLabel";
-            capacitanceLabel.Size = new Size(50, 15);
-            capacitanceLabel.TabIndex = 9;
-            capacitanceLabel.Text = "Ємність";
+            voltageLabel.AutoSize = true;
+            voltageLabel.Location = new Point(8, 162);
+            voltageLabel.Name = "voltageLabel";
+            voltageLabel.Size = new Size(53, 15);
+            voltageLabel.TabIndex = 9;
+            voltageLabel.Text = "Напруга";
             // 
             // searchButton
             // 
-            searchButton.Location = new Point(201, 217);
+            searchButton.Location = new Point(201, 275);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(134, 30);
             searchButton.TabIndex = 15;
@@ -263,7 +308,7 @@
             // resistanceLabel
             // 
             resistanceLabel.AutoSize = true;
-            resistanceLabel.Location = new Point(8, 104);
+            resistanceLabel.Location = new Point(8, 133);
             resistanceLabel.Name = "resistanceLabel";
             resistanceLabel.Size = new Size(33, 15);
             resistanceLabel.TabIndex = 7;
@@ -306,7 +351,7 @@
             // addButton
             // 
             addButton.Anchor = AnchorStyles.Bottom;
-            addButton.Location = new Point(177, 510);
+            addButton.Location = new Point(283, 510);
             addButton.Name = "addButton";
             addButton.Size = new Size(110, 30);
             addButton.TabIndex = 17;
@@ -317,7 +362,7 @@
             // changeButton
             // 
             changeButton.Anchor = AnchorStyles.Bottom;
-            changeButton.Location = new Point(322, 510);
+            changeButton.Location = new Point(428, 510);
             changeButton.Name = "changeButton";
             changeButton.Size = new Size(110, 30);
             changeButton.TabIndex = 18;
@@ -328,7 +373,7 @@
             // deleteButton
             // 
             deleteButton.Anchor = AnchorStyles.Bottom;
-            deleteButton.Location = new Point(457, 510);
+            deleteButton.Location = new Point(563, 510);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(110, 30);
             deleteButton.TabIndex = 19;
@@ -344,15 +389,23 @@
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, typeDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn, resistanceDataGridViewTextBoxColumn, capacitanceDataGridViewTextBoxColumn, inductanceDataGridViewTextBoxColumn, descriptionDataGridViewTextBoxColumn });
-            dataGridView1.DataSource = radioComponentBindingSource;
-            dataGridView1.Location = new Point(6, 291);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn, typeDataGridViewTextBoxColumn, brandDataGridViewTextBoxColumn, resistanceDataGridViewTextBoxColumn, voltageDataGridViewTextBoxColumn, сurrentDataGridViewTextBoxColumn, priceDataGridViewTextBoxColumn, descriptionDataGridViewTextBoxColumn });
+            dataGridView1.DataSource = radioComponentBindingSource1;
+            dataGridView1.Location = new Point(6, 349);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(705, 213);
+            dataGridView1.Size = new Size(917, 155);
             dataGridView1.TabIndex = 20;
+            // 
+            // radioComponentBindingSource
+            // 
+            radioComponentBindingSource.DataSource = typeof(Models.RadioComponent);
+            // 
+            // radioComponentBindingSource1
+            // 
+            radioComponentBindingSource1.DataSource = typeof(Models.RadioComponent);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -361,57 +414,67 @@
             idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-            typeDataGridViewTextBoxColumn.HeaderText = "Тип";
-            typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            typeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // nameDataGridViewTextBoxColumn
             // 
             nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            nameDataGridViewTextBoxColumn.HeaderText = "Назва";
+            nameDataGridViewTextBoxColumn.HeaderText = "Name";
             nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            typeDataGridViewTextBoxColumn.HeaderText = "Type";
+            typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            typeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // brandDataGridViewTextBoxColumn
+            // 
+            brandDataGridViewTextBoxColumn.DataPropertyName = "Brand";
+            brandDataGridViewTextBoxColumn.HeaderText = "Brand";
+            brandDataGridViewTextBoxColumn.Name = "brandDataGridViewTextBoxColumn";
+            brandDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // resistanceDataGridViewTextBoxColumn
             // 
             resistanceDataGridViewTextBoxColumn.DataPropertyName = "Resistance";
-            resistanceDataGridViewTextBoxColumn.HeaderText = "Опір";
+            resistanceDataGridViewTextBoxColumn.HeaderText = "Resistance";
             resistanceDataGridViewTextBoxColumn.Name = "resistanceDataGridViewTextBoxColumn";
             resistanceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // capacitanceDataGridViewTextBoxColumn
+            // voltageDataGridViewTextBoxColumn
             // 
-            capacitanceDataGridViewTextBoxColumn.DataPropertyName = "Capacitance";
-            capacitanceDataGridViewTextBoxColumn.HeaderText = "Ємність";
-            capacitanceDataGridViewTextBoxColumn.Name = "capacitanceDataGridViewTextBoxColumn";
-            capacitanceDataGridViewTextBoxColumn.ReadOnly = true;
+            voltageDataGridViewTextBoxColumn.DataPropertyName = "Voltage";
+            voltageDataGridViewTextBoxColumn.HeaderText = "Voltage";
+            voltageDataGridViewTextBoxColumn.Name = "voltageDataGridViewTextBoxColumn";
+            voltageDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // inductanceDataGridViewTextBoxColumn
+            // сurrentDataGridViewTextBoxColumn
             // 
-            inductanceDataGridViewTextBoxColumn.DataPropertyName = "Inductance";
-            inductanceDataGridViewTextBoxColumn.HeaderText = "Індуктивність";
-            inductanceDataGridViewTextBoxColumn.Name = "inductanceDataGridViewTextBoxColumn";
-            inductanceDataGridViewTextBoxColumn.ReadOnly = true;
+            сurrentDataGridViewTextBoxColumn.DataPropertyName = "Сurrent";
+            сurrentDataGridViewTextBoxColumn.HeaderText = "Сurrent";
+            сurrentDataGridViewTextBoxColumn.Name = "сurrentDataGridViewTextBoxColumn";
+            сurrentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
             descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            descriptionDataGridViewTextBoxColumn.HeaderText = "Опис";
+            descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // radioComponentBindingSource
-            // 
-            radioComponentBindingSource.DataSource = typeof(Models.RadioComponent);
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(724, 541);
+            ClientSize = new Size(936, 541);
             Controls.Add(dataGridView1);
             Controls.Add(deleteButton);
             Controls.Add(changeButton);
@@ -426,12 +489,14 @@
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)inductanceNumericUpDown).EndInit();
+            ((System.ComponentModel.ISupportInitialize)priceNumericUpDown).EndInit();
+            ((System.ComponentModel.ISupportInitialize)currentNumericUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)resistanceNumericUpDown).EndInit();
-            ((System.ComponentModel.ISupportInitialize)capacitanceNumericUpDown).EndInit();
+            ((System.ComponentModel.ISupportInitialize)voltageNumericUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)idNumericUpDown).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)radioComponentBindingSource1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -453,28 +518,37 @@
         private Label nameLabel;
         private Label idLabel;
         private Button searchButton;
-        private Label capacitanceLabel;
+        private Label voltageLabel;
         private TextBox descriptionTextBox;
         private Label descriptionLabel;
-        private Label inductanceLabel;
+        private Label currentLabel;
         private Button addButton;
         private Button changeButton;
         private Button deleteButton;
         private DataGridView dataGridView1;
         private ComboBox typeСomboBox;
-        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn resistanceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn capacitanceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn inductanceDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private BindingSource radioComponentBindingSource;
         private ToolStripMenuItem видалитиToolStripMenuItem;
         private ToolStripMenuItem searchToolStripMenuItem;
         private NumericUpDown idNumericUpDown;
         private NumericUpDown resistanceNumericUpDown;
-        private NumericUpDown capacitanceNumericUpDown;
-        private NumericUpDown inductanceNumericUpDown;
+        private NumericUpDown voltageNumericUpDown;
+        private NumericUpDown currentNumericUpDown;
+        private TextBox brandTextBox;
+        private Label brandLabel;
+        private NumericUpDown priceNumericUpDown;
+        private Label priceLabel;
+        private DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn brandDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn resistanceDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn voltageDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn сurrentDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
+        private BindingSource radioComponentBindingSource1;
     }
 }
