@@ -82,6 +82,11 @@ namespace Radio_handbook.Forms
                     capacitanceNumericUpDown.Enabled = false;
                     inductanceNumericUpDown.Enabled = true;
                     break;
+                case 3:
+                    resistanceNumericUpDown.Enabled = true;
+                    capacitanceNumericUpDown.Enabled = true;
+                    inductanceNumericUpDown.Enabled = true;
+                    break;
             }
         }
 

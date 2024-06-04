@@ -80,6 +80,7 @@
             // capacitanceNumericUpDown
             // 
             capacitanceNumericUpDown.Location = new Point(94, 119);
+            capacitanceNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             capacitanceNumericUpDown.Name = "capacitanceNumericUpDown";
             capacitanceNumericUpDown.Size = new Size(427, 23);
             capacitanceNumericUpDown.TabIndex = 11;
@@ -87,6 +88,7 @@
             // inductanceNumericUpDown
             // 
             inductanceNumericUpDown.Location = new Point(94, 149);
+            inductanceNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             inductanceNumericUpDown.Name = "inductanceNumericUpDown";
             inductanceNumericUpDown.Size = new Size(427, 23);
             inductanceNumericUpDown.TabIndex = 13;
@@ -94,6 +96,7 @@
             // resistanceNumericUpDown
             // 
             resistanceNumericUpDown.Location = new Point(94, 91);
+            resistanceNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             resistanceNumericUpDown.Name = "resistanceNumericUpDown";
             resistanceNumericUpDown.Size = new Size(427, 23);
             resistanceNumericUpDown.TabIndex = 9;

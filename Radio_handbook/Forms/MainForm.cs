@@ -15,11 +15,12 @@ namespace Radio_handbook.Forms
 {
     public partial class MainForm : System.Windows.Forms.Form
     {
-        Handbook handbook = new Handbook();
-
+        Handbook handbook = Handbook.LoadData();
         public MainForm()
         {
             InitializeComponent();
+
+            handbook.SaveData();
             typeСomboBox.SelectedIndex = 0;
             idNumericUpDown.Text = "";
             resistanceNumericUpDown.Text = "";
@@ -91,7 +92,10 @@ namespace Radio_handbook.Forms
             var addComponentForm = new AddComponentForm(handbook.RadioComponents);
             if (addComponentForm.ShowDialog() == DialogResult.OK)
             {
+                handbook.SaveData();
                 searchButton_Click(null, null);
+                deleteButton.Enabled = true;
+                changeButton.Enabled = true;
             }
         }
         private void changeButton_Click(Object sender, EventArgs e)
@@ -99,6 +103,7 @@ namespace Radio_handbook.Forms
             var componentEditForm = new ComponentEditForm(SelectedComponent);
             if (componentEditForm.ShowDialog() == DialogResult.OK)
             {
+                handbook.SaveData();
                 searchButton_Click(null, null);
             }
         }
@@ -108,6 +113,7 @@ namespace Radio_handbook.Forms
             if (result == DialogResult.Yes)
             {
                 handbook.RadioComponents.RemoveAt(handbook.RadioComponents.IndexOf(SelectedComponent));
+                handbook.SaveData();
                 searchButton_Click(null, null);
                 if (SelectedComponent == null)
                 {
