@@ -82,7 +82,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, toolsToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(794, 24);
+            menuStrip1.Size = new Size(724, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -151,7 +151,7 @@
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.None;
+            panel1.Anchor = AnchorStyles.Top;
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(inductanceNumericUpDown);
             panel1.Controls.Add(resistanceNumericUpDown);
@@ -168,7 +168,7 @@
             panel1.Controls.Add(nameTextBox);
             panel1.Controls.Add(nameLabel);
             panel1.Controls.Add(idLabel);
-            panel1.Location = new Point(131, 27);
+            panel1.Location = new Point(96, 27);
             panel1.Name = "panel1";
             panel1.Size = new Size(533, 258);
             panel1.TabIndex = 1;
@@ -305,8 +305,8 @@
             // 
             // addButton
             // 
-            addButton.Anchor = AnchorStyles.None;
-            addButton.Location = new Point(212, 510);
+            addButton.Anchor = AnchorStyles.Bottom;
+            addButton.Location = new Point(177, 510);
             addButton.Name = "addButton";
             addButton.Size = new Size(110, 30);
             addButton.TabIndex = 17;
@@ -316,8 +316,8 @@
             // 
             // changeButton
             // 
-            changeButton.Anchor = AnchorStyles.None;
-            changeButton.Location = new Point(357, 510);
+            changeButton.Anchor = AnchorStyles.Bottom;
+            changeButton.Location = new Point(322, 510);
             changeButton.Name = "changeButton";
             changeButton.Size = new Size(110, 30);
             changeButton.TabIndex = 18;
@@ -327,8 +327,8 @@
             // 
             // deleteButton
             // 
-            deleteButton.Anchor = AnchorStyles.None;
-            deleteButton.Location = new Point(492, 510);
+            deleteButton.Anchor = AnchorStyles.Bottom;
+            deleteButton.Location = new Point(457, 510);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new Size(110, 30);
             deleteButton.TabIndex = 19;
@@ -340,18 +340,18 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.Anchor = AnchorStyles.None;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, typeDataGridViewTextBoxColumn, nameDataGridViewTextBoxColumn, resistanceDataGridViewTextBoxColumn, capacitanceDataGridViewTextBoxColumn, inductanceDataGridViewTextBoxColumn, descriptionDataGridViewTextBoxColumn });
             dataGridView1.DataSource = radioComponentBindingSource;
-            dataGridView1.Location = new Point(4, 291);
+            dataGridView1.Location = new Point(6, 291);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(782, 213);
+            dataGridView1.Size = new Size(705, 213);
             dataGridView1.TabIndex = 20;
             // 
             // idDataGridViewTextBoxColumn
@@ -411,7 +411,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(794, 541);
+            ClientSize = new Size(724, 541);
             Controls.Add(dataGridView1);
             Controls.Add(deleteButton);
             Controls.Add(changeButton);
@@ -419,7 +419,7 @@
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            MinimumSize = new Size(810, 580);
+            MinimumSize = new Size(530, 580);
             Name = "MainForm";
             Text = "MainForm";
             menuStrip1.ResumeLayout(false);

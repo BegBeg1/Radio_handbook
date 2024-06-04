@@ -14,6 +14,6 @@ namespace Radio_handbook.Models
         public double? Resistance { get; set; }
         public double? Capacitance { get; set; }
         public double? Inductance { get; set; }
-        public string? Description { get; set; }
+        public string Description { get; set; }
     }
 }
