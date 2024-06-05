@@ -79,7 +79,8 @@ namespace Radio_handbook.Forms
         }
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show($"Ви впевнені, що хочете видалити елемент {SelectedComponent.Name}?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show($"Ви впевнені, що хочете видалити елемент {SelectedComponent.Name}?", 
+                                                    "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 handbook.RadioComponents.RemoveAt(handbook.RadioComponents.IndexOf(SelectedComponent));
@@ -110,7 +111,8 @@ namespace Radio_handbook.Forms
         }
         private void aboutToolStripMenuItem_Click(Object sender, EventArgs e)
         {
-            MessageBox.Show("Автор програми - Козир Дмитро Миколайович.\nПрограма призначення для зберігання інформації та порівняння компонентів радіоелектроніки.", "Про програму", MessageBoxButtons.OK);
+            MessageBox.Show("Автор програми - Козир Дмитро Миколайович.\nПрограма призначення для зберігання інформації " +
+                "                       та порівняння компонентів радіоелектроніки.", "Про програму", MessageBoxButtons.OK);
         }
     }
 }

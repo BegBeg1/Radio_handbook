@@ -58,7 +58,8 @@ namespace Radio_handbook.Forms
         }
         private void okButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Ви впевнені, що хочете зберегти зміни?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Ви впевнені, що хочете зберегти зміни?", "confirmation", 
+                                                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 radioComponent.Id = Convert.ToInt32(idNumericUpDown.Text);
